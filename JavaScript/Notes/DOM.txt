@@ -1,0 +1,80 @@
+### O que é DOM?
+
+O **DOM (Document Object Model)** é uma interface de programação para documentos HTML e XML. Basicamente, o DOM representa a estrutura de uma página web de maneira que os scripts podem alterar o estilo, estrutura e conteúdo do documento. Pense no DOM como a ponte entre o código HTML estático e o dinamismo do JavaScript.
+
+### O que é a Árvore DOM?
+
+A **Árvore DOM** é a representação hierárquica de todos os elementos de um documento HTML. Cada elemento do HTML é um "nó" (ou node) nesta árvore. Imagine a árvore genealógica de uma família: a raiz (root) é o documento HTML principal, e cada ramificação e folha representa os elementos como `<body>`, `<div>`, `<p>`, etc.
+
+### Window e Seus Objetos
+
+O objeto `window` é o topo da hierarquia DOM. Ele representa a janela do navegador e contém tudo relacionado à página web, incluindo o documento exibido, histórico de navegação, e muitos outros.
+
+Principais objetos dentro de `window`:
+- **document**: Representa o conteúdo da página (HTML).
+- **navigator**: Fornece informações sobre o navegador.
+- **location**: Contém a URL atual da janela.
+- **history**: Manipula o histórico de navegação do navegador.
+- **console**: Utilizado para registrar informações de depuração.
+
+### Document e Seus Objetos
+
+O objeto `document` é parte do `window` e representa a estrutura da página HTML carregada no navegador. É através do `document` que manipulamos o conteúdo da página.
+
+Principais métodos e propriedades do `document`:
+- **getElementById(id)**: Seleciona um elemento pelo seu ID.
+- **getElementsByClassName(className)**: Seleciona todos os elementos com uma determinada classe.
+- **getElementsByTagName(tagName)**: Seleciona todos os elementos com um determinado nome de tag.
+- **querySelector(selector)**: Seleciona o primeiro elemento que corresponde a um seletor CSS.
+- **querySelectorAll(selector)**: Seleciona todos os elementos que correspondem a um seletor CSS.
+- **createElement(tagName)**: Cria um novo elemento HTML.
+
+### HTML e Seus Objetos
+
+Os objetos HTML são os elementos da página, como `<div>`, `<p>`, `<a>`, etc. Cada um desses elementos pode ser acessado e manipulado através do DOM.
+
+### Child e Parent
+
+- **Parent (Pai)**: Um elemento que contém outro elemento. Exemplo: se `<div>` contém um `<p>`, o `<div>` é o parent (pai) do `<p>`.
+- **Child (Filho)**: Um elemento que está contido dentro de outro elemento. No exemplo acima, o `<p>` é o child (filho) do `<div>`.
+
+### Hierarquia Dentro do DOM
+
+A hierarquia no DOM é como a estrutura de uma árvore:
+1. **Raiz (Root)**: O objeto `window` é a raiz, contendo o objeto `document`.
+2. **Document**: O `document` é o nó principal que contém todos os elementos da página.
+3. **Elementos HTML**: Os elementos HTML são nós filhos do `document`, e eles podem conter outros elementos HTML (seus filhos).
+
+#### Exemplo Prático:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo DOM</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Bem-vindo ao DOM!</h1>
+        <p>Este é um parágrafo.</p>
+    </div>
+</body>
+</html>
+```
+
+Nesta estrutura:
+- `html` é o nó raiz do `document`.
+- Dentro do `html`, temos `head` e `body` como filhos.
+- Dentro do `body`, temos o `div` com id `container` como filho.
+- Dentro do `div`, temos `h1` e `p` como filhos.
+
+### Resumindo
+
+- **DOM** é a representação da estrutura de um documento HTML ou XML.
+- **Árvore DOM** é a estrutura hierárquica que organiza os elementos HTML como nós.
+- **Window** é o objeto global que representa a janela do navegador.
+- **Document** é o objeto que representa a página carregada e permite a manipulação do seu conteúdo.
+- **HTML Elements** são os nós da árvore DOM.
+- **Parent** é um elemento que contém outros elementos, e **Child** são os elementos contidos.
+
+Compreender o DOM é fundamental para manipular e interagir com páginas web usando JavaScript. Ao aprender sobre o DOM, você estará equipado para criar interfaces dinâmicas e interativas.

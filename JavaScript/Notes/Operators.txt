@@ -1,0 +1,191 @@
+# OPERADORES EM JAVASCRIPT #
+
+Ordem de Precedência dos Operadores:
+ Quando uma expressão contém múltiplos operadores, a ordem em  que são avaliados é importante. A seguir está a ordem de  precedência, do mais alto para o mais baixo:
+
+1.  Aritméticos 
+2.  Relacionados 
+3.  Lógicos 
+4.  Ternário 
+5.  Atribuição 
+
+
+
+
+# 1 - Aritméticos #
+Operadores usados para realizar operações matemáticas básicas.
+
+- Adição: 5 + 2 = 7
+- Subtração: 5 - 2 = 3
+- Multiplicação: 5 * 2 = 10
+- Divisão: 5 / 2 = 2.5
+- Módulo (Resto da Divisão):** 5 % 2 = 1
+- Exponenciação: 5 ** 2 = 25
+
+Detalhamento da Ordem de Precedência dos Aritméticos:
+
+1. Parênteses (`()`) para agrupar e priorizar operações
+2. **Exponenciação (`**`)**
+3. **Multiplicação (`*`), Divisão (`/`), Módulo (`%`)** - Mesma precedência; resolvem-se da esquerda para a direita
+4. **Adição (`+`), Subtração (`-`)**
+
+
+
+
+# 2 - Atribuição #
+Operadores usados para atribuir valores a variáveis.
+
+- Exemplos:
+  - var a = 5 + 3; // a = 8
+  - var b = a % 5; // b = 3
+  - var c = 5 * b ** 2; // c = 45
+  - var d = 10 - a / 2; // d = 6
+  - var e = 6 * 2 / d; // e = 2
+  - var f = b % e + 4 / e; // f = 3
+
+* 2.1 Auto-Atribuições: *
+Atribuição de novos valores a uma variável baseada em seu valor atual.
+
+- var n = 3
+  - n = n + 4; // n = 7
+  - n = n - 5; // n = 2
+  - n = n * 4; // n = 8
+
+* 2.2 Atribuições Simplificadas: *
+Formas mais curtas de escrever auto-atribuições.
+
+- var n = 3
+  - n += 4; // Equivale a n = n + 4
+  - n -= 5; // Equivale a n = n - 5
+  - n *= 4; // Equivale a n = n * 4
+
+Nota: Funciona para a mesma variável. Por exemplo, `n = n + x` pode ser simplificado, mas `n = m + x` não pode.
+
+
+
+
+# 3 - Relacionais #
+
+Operadores que comparam dois valores.
+  - Maior: 5 > 2 // true
+  - Menor: 7 < 4 // false
+  - Maior ou Igual: 8 >= 8 // true
+  - Menor ou Igual: 9 <= 7 // false
+  - Igualdade: 5 == 5 // true
+  - Diferente: 4 != 4 // false
+  - Igualdade Estrita (compara valor e tipo): 5 === '5' // false
+  - Diferente Estrito (compara valor e tipo): 5 !== '5' // true
+
+
+3.1  - Igualdade Estrita
+  Sintaxe: a === b
+  Descrição: Retorna `true` se `a` e `b` têm o mesmo valor e o mesmo tipo. Retorna `false` se os valores ou os tipos forem diferentes.
+
+Exemplos:
+ Valores e Tipos Iguais:
+    5 === 5 // true (porque ambos são números e têm o mesmo  valor)
+
+ Valores Diferentes:
+    5 === 10 // false (porque os valores são diferentes)
+
+ Tipos Diferentes:
+    5 === '5' // false (porque o tipo número não é igual ao tipo  string)
+
+
+ Booleanos e Números:
+    true === 1 // false (porque `true` é um booleano e `1` é um   número)
+
+ Objetos e Strings:
+    'hello' === new String('hello') // false (porque `'hello'`   é  uma string primitiva e `new String('hello')` é um objeto   String)
+
+
+3.2 Inequidade Estrita
+ Sintaxe: `a !== b`
+ Descrição: Retorna `true` se `a` e `b` são de tipos diferentes  ou se são de tipos iguais, mas com valores diferentes. Retorna  false se ambos os valores são iguais e do mesmo tipo.
+
+Exemplos:
+ Valores Diferentes:
+    5 !== '5' // true (porque 5 é um número e '5' é uma string)
+
+ Valores e Tipos Diferentes:
+    3 !== 4 // true (porque 3 e 4 são números, mas têm valores  diferentes)
+
+ Valores e Tipos Iguais:
+    10 !== 10 // false (porque 10 e 10 são números e têm o mesmo  valor)
+
+
+
+
+# 4 - Lógicos #
+Operadores usados para combinar expressões booleanas.
+
+Negação (`!`): Inverte o valor booleano. 
+  - !true // false
+  - !false // true
+
+
+
+
+E (`&&`): Verdadeiro se ambos os operandos são verdadeiros.
+  - true && true // true
+  - true && false // false
+
+Ou (`||`): Verdadeiro se pelo menos um dos operandos é verdadeiro.
+  - true || false // true
+  - false || false // false
+
+
+
+
+
+
+# 5 -  Operador Ternário #
+  O operador ternário é uma forma curta de fazer uma escolha entre dois valores, baseado em uma condição.
+
+### Sintaxe:
+  Se a condição for verdadeira, escolha o primeiro valor. Caso contrário, escolha o segundo valor.
+  condição ? valor1 : valor2
+
+ Exemplo Simples:
+  "Se a idade for maior ou igual a 18, o resultado será 'adulto'. Caso contrário, será 'menor'."
+
+Exemplos Detalhados:
+  Exemplo 1: Verificar se a pessoa é maior de idade
+    1. Defina a idade: 16
+    2. Se a idade é maior ou igual a 18, a pessoa é adulta. Caso contrário, a pessoa é menor de idade.
+    3. status = (idade >= 18) ? 'adulto' : 'menor'
+    4. Se a idade é 16, status será 'menor'.
+
+Exemplo 2: Verificar se a pessoa pode votar
+    1. Defina a idade: 15
+    2. Se a idade é 16 ou mais, a pessoa pode votar. Caso contrário, a pessoa não pode votar.
+    3. podeVotar = (idade >= 16) ? 'sim' : 'não'
+    4. Se a idade é 15, podeVotar será 'não'.
+
+Exemplo 3: Verificar se a loja está aberta (considerando que está aberta entre 9h e 18h)
+    1. Defina a hora: 10
+    2. Se a hora está entre 9 e 18, a loja está aberta. Caso contrário, a loja está fechada.
+    3. lojaAberta = (hora >= 9 && hora <= 18) ? 'aberta' : 'fechada'
+    4. Se a hora é 10, lojaAberta será 'aberta'.
+
+
+## Exemplos de Expressões Lógicas ##
+
+Exemplo 1: Verificar se a idade está entre 15 e 17 anos
+    1. Defina a idade: 16
+    2. A idade está entre 15 e 17?
+    3. entre15e17 = (idade >= 15 && idade <= 17) ? 'sim' : 'não'
+    4. Se a idade é 16, entre15e17 será 'sim'.
+
+Exemplo 2: Verificar se o estado é RJ ou SP
+    1. Defina o estado: 'RJ'
+    2. O estado é RJ ou SP?
+    3. ehRJouSP = (estado == 'RJ' || estado == 'SP') ? 'sim' : 'não'
+    4. Se o estado é 'RJ', ehRJouSP será 'sim'.
+
+Exemplo 3: Verificar se o salário é acima de 1500 e a pessoa não é do sexo masculino
+    1. Defina o salário: 2000
+    2. Defina o sexo: 'F'
+    3. O salário é acima de 1500 e a pessoa não é homem?
+    4. salarioEsexo = (salario > 1500 && sexo != 'M') ? 'sim' : 'não'
+    5. Se o salário é 2000 e o sexo é 'F', salarioEsexo será 'sim'.

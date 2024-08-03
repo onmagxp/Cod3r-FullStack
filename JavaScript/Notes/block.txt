@@ -1,0 +1,1 @@
+Bloco: É um conjunto de sentenças dentro de uma `{}`.

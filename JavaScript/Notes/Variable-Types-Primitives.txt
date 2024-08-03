@@ -1,0 +1,132 @@
+# Variáveis e Tipos Primitivos em JavaScript #
+
+Operador `=`
+
+O operador de atribuição é usado para definir ou atualizar o valor de uma variável. 
+
+Exemplo: `let x = 5;` significa que x recebe o valor 5.
+
+
+
+# Atribuição #
+Processo de definir ou atualizar o valor de uma variável.
+
+
+
+# Variáveis #
+Armazenam dados que podem ser de diferentes tipos e tamanhos. 
+
+
+
+# Identificadores #
+Regras para nomear variáveis:
+1. Podem começar com uma letra, `$` ou `_`.
+2. Não podem começar com números.
+3. Podem incluir letras, números, acentos e símbolos, exceto espaços.
+4. Não podem usar palavras reservadas (ex.: `let`, `function`).
+
+* Dicas para nomes de variáveis *
+
+- Case-Sensitive: Diferencia maiúsculas de minúsculas (a e A são variáveis diferentes).
+- Nomes Descritivos: Use nomes que descrevam o propósito da variável.
+
+
+
+
+# Tipos Primitivos de Dados #
+
+O que são tipos primitivos?
+
+São tipos de dados básicos e imutáveis, ou seja, não podem ser alterados. Não são objetos e não possuem métodos.
+
+1. Number: Qualquer tipo de número (inteiros, decimais, etc.).
+   Exemplo: `let num = 42;`
+
+2. String: Cadeias de caracteres.
+   Exemplo: `let nome = "Matheus";`
+
+3. Boolean: Valores verdadeiros ou falsos.
+   Exemplo: `let isStudent = true;`
+
+4. Undefined: Variável declarada mas não inicializada.
+   Exemplo: `let x;` // x é undefined
+
+5. Null: Representa um valor nulo intencionalmente.
+   Exemplo: `let y = null;`
+
+6. Symbol: Valores únicos e imutáveis, usados para criar identificadores únicos.
+   Exemplo: `let sym = Symbol('description');`
+
+7. BigInt: Representa números inteiros maiores que `Number.MAX_SAFE_INTEGER`.
+   Exemplo: `let bigNum = 123456789012345678901234567890n;`
+
+Exemplos Práticos:
+  Declarando variáveis:
+  - `let nome = "Matheus";` // String
+  - `let idade = 28;` // Number (inteiro)
+  - `let altura = 1.75;` // Number (real)
+  - `let isStudent = true;` // Boolean
+  - `let endereco;` // Undefined (não inicializada)
+  - `let nota = null;` // Null (intencionalmente vazio)
+  - `let id = Symbol('id');` // Symbol
+  - `let bigNum = 9007199254740991n;` // BigInt
+
+Usando variáveis:
+  - `let a = 5;`
+  - `let b = 3;`
+  - `let soma = a + b;` // Soma de inteiros
+  - `console.log(soma);` // 8
+  - `let texto = "Olá, ";`
+  - `let saudacao = texto + nome;` // Concatenando strings
+  - `console.log(saudacao);` // "Olá, Matheus"
+
+
+
+
+
+# Outros Tipos de Dados #
+
+1. Object
+  Coleção de propriedades, onde cada propriedade é um par   chave-valor.
+
+Exemplo:
+  let pessoa = {
+      nome: "Matheus",
+      idade: 28,
+      altura: 1.75
+  };
+  console.log(pessoa.nome); // "Matheus"
+
+2. Array
+Tipo especial de objeto usado para armazenar listas ordenadas.
+
+Exemplo:
+  let numeros = [1, 2, 3, 4, 5];
+  console.log(numeros[0]); // 1
+
+3. Function
+  Blocos de código reutilizáveis que podem ser chamados com   diferentes argumentos.
+
+  Exemplo:
+  function saudacao(nome) {
+      return "Olá, " + nome;
+  }
+  console.log(saudacao("Matheus")); // "Olá, Matheus"
+
+
+
+
+
+# O que é uma variável? #
+
+Uma variável é um espaço na memória do computador para armazenar valores que podem ser alterados durante a execução do programa.
+
+Declaração de variável: Usamos `let`, `const` ou `var` para declarar uma variável.
+Exemplo:
+let idade; // declaração
+idade = 28; // atribuição
+
+Inteiros e Reais em JavaScript: Não é necessário declarar explicitamente se uma variável é inteira ou real, pois JavaScript usa tipagem dinâmica.
+Exemplo:
+- `let inteiro = 5;` // Número inteiro
+- `let real = 3.14;` // Número real (decimal)
