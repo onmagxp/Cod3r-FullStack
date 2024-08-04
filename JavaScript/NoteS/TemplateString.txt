@@ -1,5 +1,3 @@
-Claro, Matheus Aguilera! Vamos falar sobre Template Strings em JavaScript de uma forma resumida e didática.
-
 ## O que são Template Strings?
 
 Template Strings são uma maneira mais fácil e poderosa de trabalhar com strings em JavaScript. Elas permitem a inclusão de expressões, variáveis e quebras de linha dentro das strings sem precisar usar concatenação tradicional.
@@ -81,6 +79,3 @@ let idade = 28;
 
 console.log(`Meu nome é ${nome} e eu tenho ${idade} anos.`); 
 // Meu nome é Matheus e eu tenho 28 anos.
-```
-
-Espero que essa explicação tenha te ajudado a entender Template Strings! Se tiver mais alguma dúvida ou precisar de mais exemplos, é só falar.

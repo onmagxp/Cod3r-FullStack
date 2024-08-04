@@ -1,0 +1,155 @@
+Claro, Matheus Aguilera! Vamos criar uma aula sobre arrays em JavaScript, focada para iniciantes. Vou combinar uma didática clara e detalhada, como a do Professor Guanabara, para garantir que você compreenda tudo direitinho. Vamos lá!
+
+---
+
+# Aula de Arrays em JavaScript
+
+## O que são Arrays?
+
+### Conceito Básico
+- Um array é uma coleção de elementos armazenados em uma única variável.
+- Esses elementos podem ser de qualquer tipo: números, strings, objetos, etc.
+- Imagine um array como uma lista de compras, onde cada item é um elemento dessa lista.
+
+### Estrutura de um Array
+- Um array é definido entre colchetes `[]`.
+- Cada elemento é separado por vírgulas `,`.
+
+Exemplo:
+```javascript
+let listaDeCompras = ["maçã", "banana", "leite", "pão"];
+```
+
+## Criando um Array
+
+### Declarando um Array Vazio
+Você pode criar um array vazio e adicionar elementos depois.
+```javascript
+let meuArray = [];
+```
+
+### Declarando um Array com Elementos
+Você pode criar um array já com elementos.
+```javascript
+let frutas = ["maçã", "banana", "laranja"];
+```
+
+## Acessando Elementos de um Array
+
+### Índices
+- Os elementos de um array são acessados através de índices (ou posições).
+- Os índices começam em `0`.
+
+Exemplo:
+```javascript
+let frutas = ["maçã", "banana", "laranja"];
+console.log(frutas[0]); // "maçã"
+console.log(frutas[1]); // "banana"
+console.log(frutas[2]); // "laranja"
+```
+
+## Adicionando e Removendo Elementos
+
+### Adicionando Elementos
+- `push()`: Adiciona um elemento no final do array.
+- `unshift()`: Adiciona um elemento no início do array.
+
+Exemplo:
+```javascript
+let frutas = ["maçã", "banana"];
+frutas.push("laranja"); // ["maçã", "banana", "laranja"]
+frutas.unshift("morango"); // ["morango", "maçã", "banana", "laranja"]
+```
+
+### Removendo Elementos
+- `pop()`: Remove o último elemento do array.
+- `shift()`: Remove o primeiro elemento do array.
+
+Exemplo:
+```javascript
+let frutas = ["maçã", "banana", "laranja"];
+frutas.pop(); // ["maçã", "banana"]
+frutas.shift(); // ["banana"]
+```
+
+## Percorrendo um Array
+
+### Utilizando o `for`
+O `for` é uma estrutura de repetição que permite percorrer todos os elementos de um array.
+
+Exemplo:
+```javascript
+let frutas = ["maçã", "banana", "laranja"];
+for (let i = 0; i < frutas.length; i++) {
+  console.log(frutas[i]);
+}
+```
+
+### Utilizando o `forEach`
+O `forEach` é um método do array que executa uma função para cada elemento.
+
+Exemplo:
+```javascript
+let frutas = ["maçã", "banana", "laranja"];
+frutas.forEach(function(fruta) {
+  console.log(fruta);
+});
+```
+
+## Métodos Comuns de Arrays
+
+### `length`
+O `length` retorna o número de elementos no array.
+```javascript
+let frutas = ["maçã", "banana", "laranja"];
+console.log(frutas.length); // 3
+```
+
+### `indexOf`
+O `indexOf` retorna o índice do primeiro elemento encontrado. Se não encontrar, retorna `-1`.
+```javascript
+let frutas = ["maçã", "banana", "laranja"];
+console.log(frutas.indexOf("banana")); // 1
+console.log(frutas.indexOf("uva")); // -1
+```
+
+### `includes`
+O `includes` verifica se um elemento está no array, retornando `true` ou `false`.
+```javascript
+let frutas = ["maçã", "banana", "laranja"];
+console.log(frutas.includes("banana")); // true
+console.log(frutas.includes("uva")); // false
+```
+
+## Exemplo Prático
+
+Vamos criar um exemplo prático onde vamos manipular um array de notas de alunos.
+
+```javascript
+let notas = [7.5, 8.0, 6.5, 9.0];
+
+// Adicionando uma nova nota
+notas.push(10);
+
+// Removendo a primeira nota
+notas.shift();
+
+// Calculando a média das notas
+let soma = 0;
+notas.forEach(function(nota) {
+  soma += nota;
+});
+let media = soma / notas.length;
+
+console.log("Notas:", notas);
+console.log("Média:", media.toFixed(2));
+```
+
+## Conclusão
+Os arrays são uma ferramenta poderosa em JavaScript para armazenar e manipular conjuntos de dados. Com os métodos e técnicas aprendidas nesta aula, você já pode começar a trabalhar com arrays e explorar mais suas funcionalidades.
+
+Se tiver alguma dúvida ou quiser aprofundar mais em algum tópico, é só falar!
+
+---
+
+Espero que tenha gostado da aula, Matheus Aguilera! Se precisar de mais alguma coisa, só avisar!
