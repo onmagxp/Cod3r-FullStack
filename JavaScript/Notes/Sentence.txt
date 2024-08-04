@@ -1,1 +1,1 @@
-//Sentença é um comando dado ao computador para ser executado.
+Sentença é um comando dado ao computador para ser executado.
