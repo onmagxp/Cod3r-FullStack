@@ -1,6 +1,3 @@
-Claro, Matheus Aguilera! Vamos fazer uma aula sobre objetos em JavaScript, usando uma didática clara e detalhada. Objetos são uma parte fundamental do JavaScript, então vamos garantir que você entenda bem como eles funcionam.
-
----
 
 # Aula de Objetos em JavaScript
 
