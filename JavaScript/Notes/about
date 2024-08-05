@@ -1,0 +1,30 @@
+
+# Anotações sobre JavaScript
+
+## Questões sobre JavaScript e sua História
+
+### Q-01: Qual é a diferença entre um cliente e um servidor na internet?
+- **Cliente**: É o dispositivo ou programa que solicita e consome serviços da internet. Exemplos comuns incluem navegadores web (como Chrome, Firefox) e aplicativos que fazem requisições para servidores.
+- **Servidor**: É o dispositivo ou programa que fornece serviços ou recursos para o cliente. Exemplos incluem servidores web que hospedam sites e fornecem páginas e dados aos clientes.
+
+### Q-02: Para que servem HTML, CSS e JavaScript?
+- **HTML (HyperText Markup Language)**: Define a estrutura do conteúdo da página web. É responsável por criar e organizar elementos como títulos, parágrafos, links e imagens.
+- **CSS (Cascading Style Sheets)**: É utilizado para estilizar e definir o layout do conteúdo da página. Controla aspectos como cores, fontes, espaçamentos e disposição dos elementos na página.
+- **JavaScript**: Adiciona comportamento e interatividade à página web. Permite criar funcionalidades dinâmicas, como animações, validação de formulários e interações com o usuário.
+
+### Q-03: Cite 4 websites que usam JavaScript.
+- **Google**
+- **Facebook**
+- **YouTube**
+- **Amazon**
+  
+  Esses sites utilizam JavaScript para melhorar a experiência do usuário com funcionalidades dinâmicas e interativas.
+
+### Q-04: Qual empresa criou o JavaScript?
+- **Netscape Communications**: JavaScript foi criado por Brendan Eich enquanto trabalhava na Netscape.
+
+### Q-05: Java e JavaScript têm alguma relação?
+- **Não**: Java e JavaScript são linguagens diferentes com propósitos e sintaxes distintas. Java é uma linguagem de programação orientada a objetos e independente de plataforma, enquanto JavaScript é uma linguagem de script usada principalmente para criar interatividade em páginas web.
+
+### Q-06: O que o ECMAScript tem a ver com o JavaScript?
+- **ECMAScript**: É a padronização que define as regras e funcionalidades da linguagem JavaScript. ECMAScript especifica como o JavaScript deve funcionar e é o padrão que as implementações da linguagem seguem. A padronização ajuda a garantir a consistência e compatibilidade do JavaScript em diferentes ambientes.

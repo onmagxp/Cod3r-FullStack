@@ -1,0 +1,19 @@
+
+### Usando `const` em JavaScript
+
+A palavra-chave `const` é usada para declarar variáveis que são **constantes**, ou seja, seus valores não podem ser alterados uma vez definidos. Aqui estão algumas dicas para usar `const` de forma eficaz:
+
+- **Imutabilidade**: Utilize `const` quando você sabe que a variável não vai mudar ao longo do código. Isso ajuda a evitar erros acidentais, já que você não pode reatribuir um novo valor à variável.
+- **Boa Prática**: É recomendável começar a declaração de variáveis com `const` sempre que possível. Isso torna o código mais claro e indica que a variável foi planejada para ser imutável.
+- **Flexibilidade**: Se você descobrir que precisa mudar o valor da variável posteriormente, pode alterá-la para `let`. Começar com `const` e mudar para `let` é geralmente preferível a começar com `let` e mudar para `const`, já que a primeira abordagem garante que você esteja usando variáveis constantes sempre que possível.
+- **Prevenção de Erros**: Usar mais `const` do que `let` em seu código ajuda a prevenir mudanças acidentais e melhora a legibilidade, tornando o comportamento do código mais previsível e seguro.
+
+### Exemplo de Uso:
+
+```javascript
+const pi = 3.14159; // Não pode ser alterado
+let radius = 5; // Pode ser alterado
+const circumference = 2 * pi * radius; // Usa const e let de forma apropriada
+```
+
+Ao adotar `const` sempre que possível, você melhora a robustez e clareza do seu código, garantindo que variáveis que não devem ser modificadas sejam tratadas corretamente.

@@ -1,0 +1,114 @@
+
+
+# Manipulação de Strings e Números em JavaScript
+
+## Formatação de Strings
+
+### Interpolação de Strings
+- **Definição**: Usar Template Strings para incluir variáveis dentro de strings de maneira fácil e legível.
+- **Sintaxe**: Utiliza crase (`` ` ``) para criar a string e `${}` para inserir variáveis.
+- **Exemplo**:
+  ```javascript
+  let s = 'JavaScript';
+  console.log(`Eu estou aprendendo ${s}`);
+  ```
+  Neste exemplo, `${s}` é substituído pelo valor da variável `s`.
+
+### Concatenação de Strings
+- **Definição**: Juntar várias strings em uma única string usando o operador `+`.
+- **Sintaxe**: Usa o operador `+` para unir strings.
+- **Exemplo**:
+  ```javascript
+  let s = 'JavaScript';
+  console.log("Eu estou aprendendo " + s);
+  ```
+  Aqui, `"Eu estou aprendendo "` é concatenado com o valor de `s`.
+
+### Métodos Úteis para Strings
+- **`length`**: Retorna o número de caracteres na string.
+  - **Exemplo**: 
+    ```javascript
+    let s = 'JavaScript';
+    console.log(s.length); // 10
+    ```
+- **`toUpperCase()`**: Converte todos os caracteres da string para maiúsculas.
+  - **Exemplo**:
+    ```javascript
+    let s = 'JavaScript';
+    console.log(s.toUpperCase()); // 'JAVASCRIPT'
+    ```
+- **`toLowerCase()`**: Converte todos os caracteres da string para minúsculas.
+  - **Exemplo**:
+    ```javascript
+    let s = 'JavaScript';
+    console.log(s.toLowerCase()); // 'javascript'
+    ```
+- **`includes()`**: Verifica se a string contém outra string.
+  - **Exemplo**:
+    ```javascript
+    let s = 'JavaScript';
+    console.log(s.includes('Java')); // true
+    ```
+- **`slice()`**: Extrai uma parte da string e retorna como uma nova string.
+  - **Exemplo**:
+    ```javascript
+    let s = 'JavaScript';
+    console.log(s.slice(0, 4)); // 'Java'
+    ```
+- **`replace()`**: Substitui parte da string por outra string.
+  - **Exemplo**:
+    ```javascript
+    let s = 'JavaScript';
+    console.log(s.replace('Java', 'ECMA')); // 'ECMAScript'
+    ```
+
+## Formatação para Números
+
+### `toFixed()`
+- **Definição**: Formata um número usando notação de ponto fixo, limitando o número de casas decimais.
+- **Sintaxe**: `n.toFixed(digits)`
+  - **`digits`**: Número de casas decimais desejadas.
+- **Exemplo**:
+  ```javascript
+  let n1 = 1545.6;
+  console.log(n1.toFixed(2)); // '1545.60'
+  ```
+
+### `toFixed()` com `replace()`
+- **Definição**: Substitui o ponto decimal por uma vírgula para formatos regionais que utilizam vírgula.
+- **Sintaxe**: `n.toFixed(digits).replace('.', ',')`
+- **Exemplo**:
+  ```javascript
+  let n1 = 1545.6;
+  console.log(n1.toFixed(2).replace('.', ',')); // '1545,60'
+  ```
+
+### `toLocaleString()`
+- **Definição**: Formata o número de acordo com a localidade especificada, ajustando a representação de acordo com as convenções regionais.
+- **Sintaxe**: `n.toLocaleString([localidade])`
+  - **`localidade`** (opcional): Código da localidade, como `'pt-BR'` para português do Brasil.
+- **Exemplo**:
+  ```javascript
+  let n1 = 1545.6;
+  console.log(n1.toLocaleString()); // Pode retornar '1,545.6' ou '1.545,6' dependendo da localidade
+  ```
+
+### Formatação de Números como Moeda
+- **Real (BRL)**: Formata o número como moeda brasileira.
+  - **Exemplo**:
+    ```javascript
+    let n1 = 1545.6;
+    console.log(n1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })); // 'R$ 1.545,60'
+    ```
+- **Euro (EUR)**: Formata o número como moeda europeia.
+  - **Exemplo**:
+    ```javascript
+    let n1 = 1545.6;
+    console.log(n1.toLocaleString('pt-BR', { style: 'currency', currency: 'EUR' })); // '€ 1.545,60'
+    ```
+- **Dólar Americano (USD)**: Formata o número como moeda americana.
+  - **Exemplo**:
+    ```javascript
+    let n1 = 1545.6;
+    console.log(n1.toLocaleString('pt-BR', { style: 'currency', currency: 'USD' })); // 'US$ 1.545,60'
+    ```

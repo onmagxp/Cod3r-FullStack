@@ -1,6 +1,3 @@
-Claro, Matheus Aguilera! Vamos criar uma aula sobre arrays em JavaScript, focada para iniciantes. Vou combinar uma didática clara e detalhada, como a do Professor Guanabara, para garantir que você compreenda tudo direitinho. Vamos lá!
-
----
 
 # Aula de Arrays em JavaScript
 
@@ -148,8 +145,3 @@ console.log("Média:", media.toFixed(2));
 ## Conclusão
 Os arrays são uma ferramenta poderosa em JavaScript para armazenar e manipular conjuntos de dados. Com os métodos e técnicas aprendidas nesta aula, você já pode começar a trabalhar com arrays e explorar mais suas funcionalidades.
 
-Se tiver alguma dúvida ou quiser aprofundar mais em algum tópico, é só falar!
-
----
-
-Espero que tenha gostado da aula, Matheus Aguilera! Se precisar de mais alguma coisa, só avisar!

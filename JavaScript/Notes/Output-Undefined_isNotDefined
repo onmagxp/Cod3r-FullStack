@@ -1,0 +1,41 @@
+As diferenças entre `undefined` e `is not defined` são aspectos relacionados ao **output** (ou saída) do seu código em JavaScript, especificamente como o ambiente de execução responde ao tentar acessar variáveis ou propriedades.
+
+Aqui está um resumo de como essas diferenças se refletem no output:
+
+### `undefined`
+
+- **Quando ocorre**: Quando uma variável ou propriedade existe, mas ainda não foi inicializada ou não tem um valor definido.
+- **Output**: O output será `undefined`, indicando que a variável ou propriedade foi declarada, mas não tem valor atribuído.
+  
+  **Exemplo**:
+  ```javascript
+  let a;
+  console.log(a); // Output: undefined
+
+  const obj = { name: 'Alice' };
+  console.log(obj.age); // Output: undefined (propriedade 'age' não existe no objeto)
+  ```
+
+### `is not defined`
+
+- **Quando ocorre**: Quando você tenta acessar uma variável que nunca foi declarada no escopo atual. Este é um erro de referência e resulta em um **ReferenceError**.
+- **Output**: O output será um erro, tipicamente algo como `ReferenceError: <variável> is not defined`, indicando que a variável não foi declarada ou não é acessível no contexto.
+
+  **Exemplo**:
+  ```javascript
+  console.log(b); // ReferenceError: b is not defined
+
+  function test() {
+      console.log(c); // ReferenceError: c is not defined
+  }
+  test();
+  ```
+
+### Contexto de Output
+
+- **`undefined`**: Usado para mostrar que uma variável foi declarada, mas não foi inicializada, ou uma propriedade de objeto não existe.
+- **`is not defined`**: Um erro indicando que o código está tentando acessar algo que não foi declarado, e não é um valor que pode ser exibido como parte do output normal.
+
+### Conclusão
+
+Entender essas diferenças ajuda a diagnosticar e corrigir problemas em seu código, especialmente ao depurar e testar. Quando você vê `undefined`, o problema geralmente é que o valor ainda não foi definido ou a propriedade não existe. Quando você vê `is not defined`, o problema é que a variável nunca foi declarada.

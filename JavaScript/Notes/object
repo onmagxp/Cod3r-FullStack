@@ -153,9 +153,3 @@ console.log(livro); // { titulo: "O Senhor dos Anéis", autor: "J.R.R. Tolkien",
 
 ## Conclusão
 Objetos são uma estrutura de dados fundamental em JavaScript, permitindo armazenar e organizar dados de maneira eficiente. Com as técnicas e métodos aprendidos nesta aula, você já pode começar a trabalhar com objetos e explorar mais suas funcionalidades.
-
-Se tiver alguma dúvida ou quiser aprofundar mais em algum tópico, é só falar!
-
----
-
-Espero que tenha gostado da aula, Matheus Aguilera! Se precisar de mais alguma coisa, só avisar!

@@ -1,0 +1,13 @@
+
+### O Que é uma "Sentence" em JavaScript?
+
+Em JavaScript, uma **"sentence"** (ou **"declaração"**) é uma unidade fundamental de código que executa uma ação ou realiza uma tarefa específica. 
+
+- **Definição**: Pense em uma "sentence" como uma instrução completa que o JavaScript entende e executa. Cada declaração é como um comando que diz ao computador o que fazer, e deve ser finalizada com um ponto e vírgula (`;`) para indicar o fim da instrução.
+- **Função**: As "sentences" podem fazer uma variedade de coisas, como criar variáveis, executar funções, realizar cálculos ou controlar o fluxo do programa.
+- **Exemplos**: 
+  - Declarar uma variável: `let x = 10;`
+  - Chamar uma função: `console.log('Hello, world!');`
+  - Fazer uma operação: `x += 5;`
+
+Cada "sentence" é uma parte essencial do código que contribui para o funcionamento geral do programa.
