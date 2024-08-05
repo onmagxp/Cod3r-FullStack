@@ -1,0 +1,164 @@
+Claro, Matheus Aguilera! Vamos fazer uma aula sobre objetos em JavaScript, usando uma didática clara e detalhada. Objetos são uma parte fundamental do JavaScript, então vamos garantir que você entenda bem como eles funcionam.
+
+---
+
+# Aula de Objetos em JavaScript
+
+## O que são Objetos?
+
+### Conceito Básico
+- Um objeto é uma coleção de propriedades, e cada propriedade é uma associação entre um nome (ou chave) e um valor.
+- Imagine um objeto como uma "caixa" onde você pode armazenar dados de maneira organizada.
+
+### Estrutura de um Objeto
+- Os objetos são definidos entre chaves `{}`.
+- As propriedades dentro de um objeto são formadas por pares chave: valor, separados por vírgulas `,`.
+
+Exemplo:
+```javascript
+let pessoa = {
+  nome: "Matheus",
+  idade: 28,
+  cidade: "Porto"
+};
+```
+
+## Criando um Objeto
+
+### Declarando um Objeto Vazio
+Você pode criar um objeto vazio e adicionar propriedades depois.
+```javascript
+let meuObjeto = {};
+```
+
+### Declarando um Objeto com Propriedades
+Você pode criar um objeto já com propriedades.
+```javascript
+let carro = {
+  marca: "Toyota",
+  modelo: "Corolla",
+  ano: 2021
+};
+```
+
+## Acessando Propriedades de um Objeto
+
+### Notação de Ponto
+A maneira mais comum de acessar propriedades de um objeto é usando a notação de ponto.
+```javascript
+let pessoa = {
+  nome: "Matheus",
+  idade: 28,
+  cidade: "Porto"
+};
+console.log(pessoa.nome); // "Matheus"
+console.log(pessoa.idade); // 28
+console.log(pessoa.cidade); // "Porto"
+```
+
+### Notação de Colchetes
+Você também pode acessar propriedades usando colchetes `[]`. Isso é útil quando o nome da propriedade é armazenado em uma variável.
+```javascript
+let propriedade = "cidade";
+console.log(pessoa[propriedade]); // "Porto"
+```
+
+## Adicionando e Modificando Propriedades
+
+### Adicionando Propriedades
+Você pode adicionar novas propriedades a um objeto.
+```javascript
+let pessoa = {
+  nome: "Matheus",
+  idade: 28
+};
+pessoa.cidade = "Porto";
+console.log(pessoa); // { nome: "Matheus", idade: 28, cidade: "Porto" }
+```
+
+### Modificando Propriedades
+Você pode modificar o valor de uma propriedade existente.
+```javascript
+pessoa.idade = 29;
+console.log(pessoa); // { nome: "Matheus", idade: 29, cidade: "Porto" }
+```
+
+## Removendo Propriedades
+Para remover uma propriedade de um objeto, use o operador `delete`.
+```javascript
+delete pessoa.cidade;
+console.log(pessoa); // { nome: "Matheus", idade: 29 }
+```
+
+## Métodos em Objetos
+
+### Funções como Propriedades
+- Um método é uma função que é uma propriedade de um objeto.
+- Métodos são definidos da mesma forma que outras propriedades.
+
+Exemplo:
+```javascript
+let pessoa = {
+  nome: "Matheus",
+  idade: 28,
+  saudacao: function() {
+    return `Olá, meu nome é ${this.nome} e eu tenho ${this.idade} anos.`;
+  }
+};
+console.log(pessoa.saudacao()); // "Olá, meu nome é Matheus e eu tenho 28 anos."
+```
+
+## Percorrendo Propriedades de um Objeto
+
+### Utilizando `for...in`
+O `for...in` é usado para percorrer todas as propriedades enumeráveis de um objeto.
+```javascript
+let pessoa = {
+  nome: "Matheus",
+  idade: 28,
+  cidade: "Porto"
+};
+
+for (let chave in pessoa) {
+  console.log(chave + ": " + pessoa[chave]);
+}
+// nome: Matheus
+// idade: 28
+// cidade: Porto
+```
+
+## Exemplo Prático
+
+Vamos criar um exemplo prático onde vamos manipular um objeto que representa um livro.
+
+```javascript
+let livro = {
+  titulo: "O Senhor dos Anéis",
+  autor: "J.R.R. Tolkien",
+  ano: 1954,
+  info: function() {
+    return `${this.titulo}, escrito por ${this.autor} em ${this.ano}.`;
+  }
+};
+
+// Adicionando uma nova propriedade
+livro.genero = "Fantasia";
+
+// Modificando uma propriedade existente
+livro.ano = 1955;
+
+// Removendo uma propriedade
+delete livro.genero;
+
+console.log(livro.info()); // "O Senhor dos Anéis, escrito por J.R.R. Tolkien em 1955."
+console.log(livro); // { titulo: "O Senhor dos Anéis", autor: "J.R.R. Tolkien", ano: 1955, info: [Function: info] }
+```
+
+## Conclusão
+Objetos são uma estrutura de dados fundamental em JavaScript, permitindo armazenar e organizar dados de maneira eficiente. Com as técnicas e métodos aprendidos nesta aula, você já pode começar a trabalhar com objetos e explorar mais suas funcionalidades.
+
+Se tiver alguma dúvida ou quiser aprofundar mais em algum tópico, é só falar!
+
+---
+
+Espero que tenha gostado da aula, Matheus Aguilera! Se precisar de mais alguma coisa, só avisar!
