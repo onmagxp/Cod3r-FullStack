@@ -1,0 +1,87 @@
+Claro, Matheus Aguilera! Vamos entender por que `var` em JavaScript só tem dois escopos de uma forma bem simples.
+
+### O que é escopo?
+Escopo é o contexto onde as variáveis são visíveis e podem ser usadas. Existem dois tipos principais de escopo em JavaScript:
+
+1. **Escopo Global**: A variável pode ser acessada de qualquer lugar no código.
+2. **Escopo Local**: A variável só pode ser acessada dentro de uma função onde foi declarada.
+
+### Escopos do `var`
+Em JavaScript, a variável declarada com `var` pode ter apenas dois escopos:
+
+1. **Escopo Global**: Quando a variável `var` é declarada fora de qualquer função, ela é global e pode ser acessada de qualquer lugar no código.
+
+    ```javascript
+    var x = 10; // x é global
+
+    function exemplo() {
+        console.log(x); // Acessa a variável global x
+    }
+
+    exemplo(); // Vai imprimir 10
+    console.log(x); // Vai imprimir 10
+    ```
+
+2. **Escopo de Função**: Quando a variável `var` é declarada dentro de uma função, ela só pode ser acessada dentro dessa função.
+
+    ```javascript
+    function exemplo() {
+        var y = 20; // y é local da função
+        console.log(y); // Acessa y dentro da função
+    }
+
+    exemplo(); // Vai imprimir 20
+    console.log(y); // Vai dar erro porque y não está definida no escopo global
+    ```
+
+### Por que só dois escopos?
+Para entender isso melhor, vamos usar uma analogia simples:
+
+Imagine que `var` é como uma chave que você pode usar para abrir portas em duas áreas:
+
+1. **Área Global (Toda a casa)**: Se você deixar a chave na sala de estar (fora de qualquer função), qualquer um na casa pode usá-la.
+
+2. **Área Privada (Quarto de uma pessoa)**: Se você deixar a chave no quarto (dentro de uma função), só quem está no quarto pode usá-la.
+
+Diferente de `let` e `const`, que introduzem o **escopo de bloco** (área delimitada por `{}` como em loops e condições), `var` não se importa com blocos fora de funções. Isso significa que variáveis `var` são **levadas** (ou "hoisted") para o topo do seu escopo.
+
+### Exemplo de `hoisting`
+
+```javascript
+function exemplo() {
+    console.log(z); // undefined, pois z foi "levantada" mas não inicializada
+    var z = 30;
+    console.log(z); // 30, agora z foi inicializada
+}
+
+exemplo();
+```
+
+A variável `z` é "levantada" para o topo da função, mas sua inicialização permanece onde está, resultando em `undefined` na primeira chamada de `console.log`.
+
+Espero que isso tenha esclarecido por que `var` só tem dois escopos e como isso funciona em JavaScript! Se tiver mais dúvidas, estou aqui para ajudar.
+
+
+
+### DÚVIDA:
+
+**Se `var` estiver fora de uma função automaticamente é global mesmo estando dentro de blocos independente se são 1, 2 , 5, 10 blocos??**
+
+Isso mesmo, Matheus Aguilera! Se você declara uma variável usando `var` fora de qualquer função, ela se torna automaticamente global, mesmo se estiver dentro de blocos (`if`, `for`, `while`, etc.).
+
+### Exemplo:
+
+```javascript
+if (true) {
+    var x = 10; // x é global
+}
+
+for (let i = 0; i < 3; i++) {
+    var y = 20; // y é global
+}
+
+console.log(x); // 10, porque x é global
+console.log(y); // 20, porque y é global
+```
+
+Mesmo que `x` e `y` sejam declaradas dentro de blocos, elas ainda são globais porque `var` não respeita o escopo de bloco. Isso pode levar a comportamentos inesperados e bugs, por isso é recomendado usar `let` ou `const` para declarar variáveis que devem ter escopo de bloco.
