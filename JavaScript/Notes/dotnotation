@@ -1,0 +1,106 @@
+Vamos criar uma aula didática sobre a notação ponto em JavaScript, que é usada para acessar propriedades e métodos de objetos.
+
+### Aula: Notação Ponto em JavaScript
+
+#### 1. Introdução aos Objetos
+Em JavaScript, um objeto é uma coleção de propriedades, onde cada propriedade é uma associação entre um nome (ou chave) e um valor. Valores de propriedade podem ser de qualquer tipo, incluindo outros objetos e funções.
+
+#### 2. O que é Notação Ponto?
+A notação ponto é uma forma de acessar as propriedades e métodos de um objeto. Usamos o ponto (`.`) para acessar a propriedade ou método desejado.
+
+#### 3. Criando um Objeto
+Vamos começar criando um objeto simples chamado `pessoa`.
+
+```javascript
+const pessoa = {
+    nome: 'João',
+    idade: 30,
+    falar: function() {
+        console.log('Olá, meu nome é ' + this.nome);
+    }
+};
+```
+
+Aqui temos um objeto `pessoa` com três propriedades:
+- `nome` (string)
+- `idade` (number)
+- `falar` (função)
+
+#### 4. Acessando Propriedades com Notação Ponto
+Usamos a notação ponto para acessar as propriedades do objeto.
+
+```javascript
+console.log(pessoa.nome); // 'João'
+console.log(pessoa.idade); // 30
+```
+
+- `pessoa.nome` acessa a propriedade `nome` do objeto `pessoa`.
+- `pessoa.idade` acessa a propriedade `idade` do objeto `pessoa`.
+
+#### 5. Chamando Métodos com Notação Ponto
+Usamos a notação ponto para chamar métodos do objeto.
+
+```javascript
+pessoa.falar(); // 'Olá, meu nome é João'
+```
+
+- `pessoa.falar()` chama o método `falar` do objeto `pessoa`.
+
+#### 6. Adicionando e Modificando Propriedades
+Também podemos adicionar novas propriedades ou modificar as existentes usando a notação ponto.
+
+```javascript
+pessoa.sobrenome = 'Silva'; // Adiciona a propriedade sobrenome
+console.log(pessoa.sobrenome); // 'Silva'
+
+pessoa.idade = 31; // Modifica a propriedade idade
+console.log(pessoa.idade); // 31
+```
+
+#### 7. Removendo Propriedades
+Para remover uma propriedade de um objeto, usamos o operador `delete`.
+
+```javascript
+delete pessoa.sobrenome; // Remove a propriedade sobrenome
+console.log(pessoa.sobrenome); // undefined
+```
+
+### Resumo
+A notação ponto é uma maneira fácil e direta de acessar, adicionar, modificar e remover propriedades e métodos de um objeto em JavaScript.
+
+### Código Completo
+
+Aqui está o código completo com comentários explicativos:
+
+```javascript
+// Criação do objeto pessoa
+const pessoa = {
+    nome: 'João',
+    idade: 30,
+    falar: function() {
+        console.log('Olá, meu nome é ' + this.nome);
+    }
+};
+
+// Acessando propriedades usando notação ponto
+console.log(pessoa.nome); // 'João' -> Acessa a propriedade nome
+console.log(pessoa.idade); // 30 -> Acessa a propriedade idade
+
+// Chamando método usando notação ponto
+pessoa.falar(); // 'Olá, meu nome é João' -> Chama o método falar
+
+// Adicionando nova propriedade usando notação ponto
+pessoa.sobrenome = 'Silva'; // Adiciona a propriedade sobrenome
+console.log(pessoa.sobrenome); // 'Silva' -> Acessa a nova propriedade
+
+// Modificando propriedade existente usando notação ponto
+pessoa.idade = 31; // Modifica a propriedade idade
+console.log(pessoa.idade); // 31 -> Acessa a propriedade modificada
+
+// Removendo propriedade usando o operador delete
+delete pessoa.sobrenome; // Remove a propriedade sobrenome
+console.log(pessoa.sobrenome); // undefined -> Propriedade foi removida
+```
+
+### Conclusão
+A notação ponto é uma ferramenta poderosa e essencial em JavaScript para trabalhar com objetos. Com ela, podemos acessar e manipular facilmente as propriedades e métodos dos nossos objetos.
