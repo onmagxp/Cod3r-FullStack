@@ -1,0 +1,84 @@
+
+### Aula: Funções, Objetos e Instâncias em JavaScript
+
+#### 1. Introdução ao Tipo de Dados
+
+Em JavaScript, tudo é um tipo de dado. Vamos explorar isso usando o comando `typeof`, que nos diz o tipo de um valor ou objeto.
+
+#### 2. Objetos em JavaScript
+
+- **Objeto (`Object`)**: É uma estrutura de dados que contém propriedades (atributos e métodos). Pense em um objeto como uma caixa que pode conter vários itens.
+
+```javascript
+console.log(typeof Object); // "function"
+console.log(typeof new Object()); // "object"
+```
+
+- `typeof Object` retorna `"function"` porque `Object` é uma função que cria objetos.
+- `typeof new Object()` retorna `"object"` porque `new Object()` cria uma nova instância de um objeto.
+
+#### 3. Funções Construtoras
+
+- **Função Construtora**: Uma maneira de criar objetos personalizados. Pense em uma função construtora como uma planta (blueprint) para construir objetos.
+
+```javascript
+const Cliente = function() {};
+console.log("Typeof = " + typeof Cliente); // "function"
+console.log("typeof new = " + typeof new Cliente()); // "object"
+```
+
+- `typeof Cliente` retorna `"function"` porque `Cliente` é uma função.
+- `typeof new Cliente()` retorna `"object"` porque `new Cliente()` cria uma nova instância de um objeto `Cliente`.
+
+#### 4. Classes
+
+- **Classes**: Uma forma moderna e mais intuitiva de criar funções construtoras e objetos em JavaScript. Pense em uma classe como uma planta (blueprint) mais organizada e fácil de ler.
+
+```javascript
+class Produto {}
+console.log("Typeof = " + typeof Produto); // "function"
+console.log("Typeof new = " + typeof new Produto()); // "object"
+```
+
+- `typeof Produto` retorna `"function"` porque `Produto` é uma função (classe).
+- `typeof new Produto()` retorna `"object"` porque `new Produto()` cria uma nova instância de um objeto `Produto`.
+
+### Resumo e Analogias
+
+1. **Objeto (`Object`)**: 
+   - `Object` é uma função que cria objetos.
+   - `new Object()` cria uma nova instância de um objeto.
+   - Analogia: `Object` é como uma fábrica de caixas, e `new Object()` é uma caixa específica feita pela fábrica.
+
+2. **Função Construtora**:
+   - `Cliente` é uma função usada para criar objetos `Cliente`.
+   - `new Cliente()` cria uma nova instância de `Cliente`.
+   - Analogia: `Cliente` é como uma planta (blueprint) para construir casas, e `new Cliente()` é uma casa específica construída com essa planta.
+
+3. **Classe**:
+   - `Produto` é uma classe que cria objetos `Produto`.
+   - `new Produto()` cria uma nova instância de `Produto`.
+   - Analogia: `Produto` é uma planta (blueprint) moderna para construir casas, e `new Produto()` é uma casa específica construída com essa planta.
+
+### Código Completo
+
+Aqui está o código completo com comentários para reforçar o entendimento:
+
+```javascript
+console.log(typeof Object); // "function" -> Object é uma função que cria objetos
+console.log(typeof new Object()); // "object" -> new Object() cria uma nova instância de um objeto
+
+// Função construtora Cliente
+const Cliente = function() {};
+console.log("Typeof = " + typeof Cliente); // "function" -> Cliente é uma função
+console.log("typeof new = " + typeof new Cliente()); // "object" -> new Cliente() cria uma nova instância de Cliente
+
+// Classe Produto
+class Produto {}
+console.log("Typeof = " + typeof Produto); // "function" -> Produto é uma classe (função)
+console.log("Typeof new = " + typeof new Produto()); // "object" -> new Produto() cria uma nova instância de Produto
+```
+
+### Conclusão
+
+Entender como funções, objetos e classes funcionam em JavaScript é fundamental para programar de forma eficaz. Usando `typeof`, podemos ver claramente as diferenças entre uma função (ou classe) e uma instância de objeto criada por elas.

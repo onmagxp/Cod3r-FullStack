@@ -1,0 +1,68 @@
+Vamos entender como `let` funciona em relação aos escopos, e como ele difere do `var`.
+
+### Escopos do `let`
+Em JavaScript, as variáveis declaradas com `let` têm dois tipos principais de escopo:
+
+1. **Escopo Global**: Quando uma variável `let` é declarada fora de qualquer bloco ou função, ela é global e pode ser acessada de qualquer lugar no código.
+
+    ```javascript
+    let a = 10; // a é global
+
+    function exemplo() {
+        console.log(a); // Acessa a variável global a
+    }
+
+    exemplo(); // Vai imprimir 10
+    console.log(a); // Vai imprimir 10
+    ```
+
+2. **Escopo de Bloco**: Quando uma variável `let` é declarada dentro de um bloco (delimitado por `{}`), ela só pode ser acessada dentro desse bloco. Isso inclui blocos de funções, loops, condicionais, etc.
+
+    ```javascript
+    if (true) {
+        let b = 20; // b é local do bloco if
+        console.log(b); // Acessa b dentro do bloco if
+    }
+
+    console.log(b); // Vai dar erro porque b não está definida no escopo global
+    ```
+
+### Exemplo com Blocos
+
+```javascript
+if (true) {
+    let x = 10; // x é local ao bloco if
+    console.log(x); // 10
+}
+
+for (let i = 0; i < 3; i++) {
+    let y = 20; // y é local ao bloco for
+    console.log(y); // 20
+}
+
+console.log(x); // Vai dar erro porque x não está definida fora do bloco if
+console.log(y); // Vai dar erro porque y não está definida fora do bloco for
+```
+
+Neste exemplo, `x` e `y` são apenas visíveis dentro dos seus respectivos blocos (`if` e `for`). Fora desses blocos, elas não existem.
+
+### Comparação `var` vs `let`
+
+- `var` tem escopo de função e escopo global.
+- `let` tem escopo de bloco, função e global.
+
+### Exemplo Comparativo
+
+```javascript
+if (true) {
+    var varVariable = "Sou global";
+    let letVariable = "Sou de bloco";
+}
+
+console.log(varVariable); // "Sou global", porque varVariable é global
+console.log(letVariable); // Erro, porque letVariable não está definida fora do bloco if
+```
+
+Essa diferença é crucial para evitar bugs, já que variáveis `let` são mais previsíveis e seguras, respeitando o escopo de bloco.
+
+Espero que isso tenha esclarecido como `let` funciona e como ele difere de `var` em termos de escopo!

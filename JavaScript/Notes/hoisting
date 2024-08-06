@@ -1,0 +1,79 @@
+Vamos entender como o hoisting funciona em JavaScript para `var` e `let`.
+
+### O que é Hoisting?
+
+**Hoisting** é um comportamento em JavaScript onde declarações de variáveis e funções são "levantadas" para o topo do seu escopo antes da execução do código. Isso significa que você pode usar variáveis e funções antes de serem declaradas no código.
+
+### Hoisting com `var`
+
+Quando uma variável é declarada com `var`, tanto a declaração quanto a inicialização são "levantadas" para o topo do escopo. No entanto, a inicialização não ocorre até que a linha de código seja executada. Isso resulta em variáveis `var` sendo inicializadas como `undefined` se usadas antes de sua linha de declaração.
+
+#### Exemplo:
+
+```javascript
+console.log(a); // undefined, a é levantada, mas ainda não inicializada
+var a = 10;
+console.log(a); // 10, agora a foi inicializada
+```
+
+No exemplo acima, a declaração `var a` é "levantada" para o topo do escopo, mas a inicialização `a = 10` só ocorre na linha onde foi escrita. Antes disso, `a` tem o valor `undefined`.
+
+### Hoisting com `let`
+
+Com `let`, apenas a declaração é "levantada" para o topo do bloco, mas a inicialização não é feita. Além disso, a variável entra em um estado chamado **"zona morta temporal"** (Temporal Dead Zone, TDZ) desde o início do bloco até a linha de inicialização. Se tentar acessar a variável nessa zona morta, um erro `ReferenceError` é lançado.
+
+#### Exemplo:
+
+```javascript
+console.log(b); // ReferenceError, b está na TDZ
+let b = 20;
+console.log(b); // 20, agora b foi inicializada
+```
+
+No exemplo acima, a variável `b` é "levantada" para o topo do bloco, mas não é inicializada até a linha `let b = 20`. Tentar acessar `b` antes dessa linha resulta em um erro.
+
+### Comparação Visual de Hoisting
+
+Para ilustrar melhor, veja como o código é interpretado pelo JavaScript:
+
+#### Código com `var`:
+
+```javascript
+console.log(a); // undefined
+var a = 10;
+console.log(a); // 10
+```
+
+Interpretado como:
+
+```javascript
+var a;
+console.log(a); // undefined
+a = 10;
+console.log(a); // 10
+```
+
+#### Código com `let`:
+
+```javascript
+console.log(b); // ReferenceError
+let b = 20;
+console.log(b); // 20
+```
+
+Interpretado como:
+
+```javascript
+// Temporal Dead Zone começa aqui
+let b; // Declaração é "levantada"
+console.log(b); // ReferenceError, b está na TDZ
+b = 20; // Inicialização ocorre aqui
+console.log(b); // 20
+```
+
+### Resumo
+
+- **`var`**: Declaração e inicialização são levantadas, inicialização ocorre na linha de código, valores antes são `undefined`.
+- **`let`**: Apenas a declaração é levantada, a variável fica na TDZ até a inicialização, acessos antes resultam em `ReferenceError`.
+
+Com essas informações, fica claro que `let` é mais previsível e seguro, ajudando a evitar bugs comuns associados ao hoisting do `var`.
