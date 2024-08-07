@@ -1,0 +1,121 @@
+Vamos criar uma aula didática sobre atribuição (`assignment`) em JavaScript. Vamos explorar como funciona a atribuição de valores a variáveis e objetos, usando analogias e exemplos simples.
+
+### Aula: Atribuição (`Assignment`) em JavaScript
+
+#### 1. Introdução à Atribuição
+Atribuição é o processo de dar um valor a uma variável. Em JavaScript, usamos o operador de atribuição (`=`) para isso.
+
+#### 2. Atribuição Básica
+A forma mais simples de atribuição é associar um valor a uma variável.
+
+```javascript
+let a = 10; // Atribui o valor 10 à variável a
+console.log(a); // 10
+```
+
+Aqui, `a = 10` significa que estamos armazenando o valor 10 na variável `a`.
+
+#### 3. Atribuição de Variáveis
+Podemos atribuir o valor de uma variável a outra variável.
+
+```javascript
+let b = 20;
+let c = b; // Atribui o valor de b à variável c
+console.log(c); // 20
+```
+
+Aqui, `c = b` significa que `c` agora contém o mesmo valor que `b`.
+
+#### 4. Atribuição com Objetos
+Quando atribuimos objetos, estamos passando a referência ao objeto, não uma cópia do objeto.
+
+```javascript
+let obj1 = { nome: 'João' };
+let obj2 = obj1; // Atribui a referência de obj1 a obj2
+console.log(obj2.nome); // 'João'
+
+obj2.nome = 'Maria'; // Modifica o nome através de obj2
+console.log(obj1.nome); // 'Maria' (obj1 também foi modificado)
+```
+
+Aqui, `obj2 = obj1` significa que `obj2` agora referencia o mesmo objeto que `obj1`. Modificar `obj2` também modifica `obj1`.
+
+#### 5. Atribuição Composta
+JavaScript permite atribuições compostas que combinam operadores aritméticos com o operador de atribuição.
+
+```javascript
+let x = 5;
+x += 3; // Equivalente a x = x + 3
+console.log(x); // 8
+
+x *= 2; // Equivalente a x = x * 2
+console.log(x); // 16
+```
+
+Aqui, `x += 3` é uma forma curta de escrever `x = x + 3`.
+
+#### 6. Atribuição de Desestruturação
+Atribuição de desestruturação permite extrair valores de arrays ou propriedades de objetos em variáveis distintas.
+
+##### Desestruturação de Arrays
+
+```javascript
+let [d, e] = [10, 20]; // Atribui 10 a d e 20 a e
+console.log(d); // 10
+console.log(e); // 20
+```
+
+##### Desestruturação de Objetos
+
+```javascript
+let { nome, idade } = { nome: 'Ana', idade: 25 }; // Atribui 'Ana' a nome e 25 a idade
+console.log(nome); // 'Ana'
+console.log(idade); // 25
+```
+
+### Resumo
+A atribuição é um conceito fundamental em JavaScript que permite armazenar e manipular valores em variáveis. Usamos o operador de atribuição (`=`) para associar valores a variáveis, e podemos utilizar atribuições simples, compostas, e de desestruturação.
+
+### Código Completo
+
+Aqui está o código completo com comentários explicativos:
+
+```javascript
+// Atribuição básica
+let a = 10; // Atribui o valor 10 à variável a
+console.log(a); // 10
+
+// Atribuição de variável para variável
+let b = 20;
+let c = b; // Atribui o valor de b à variável c
+console.log(c); // 20
+
+// Atribuição com objetos (referência)
+let obj1 = { nome: 'João' };
+let obj2 = obj1; // Atribui a referência de obj1 a obj2
+console.log(obj2.nome); // 'João'
+
+obj2.nome = 'Maria'; // Modifica o nome através de obj2
+console.log(obj1.nome); // 'Maria' (obj1 também foi modificado)
+
+// Atribuição composta
+let x = 5;
+x += 3; // Equivalente a x = x + 3
+console.log(x); // 8
+
+x *= 2; // Equivalente a x = x * 2
+console.log(x); // 16
+
+// Atribuição de desestruturação com arrays
+let [d, e] = [10, 20]; // Atribui 10 a d e 20 a e
+console.log(d); // 10
+console.log(e); // 20
+
+// Atribuição de desestruturação com objetos
+let { nome, idade } = { nome: 'Ana', idade: 25 }; // Atribui 'Ana' a nome e 25 a idade
+console.log(nome); // 'Ana'
+console.log(idade); // 25
+```
+
+### Conclusão
+A atribuição é uma operação fundamental em JavaScript. Compreender como ela funciona ajuda a manipular e gerenciar dados de forma eficiente e eficaz
