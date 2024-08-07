@@ -23,7 +23,7 @@ console.log(typeof new Object()); // "object"
 
 ```javascript
 const Cliente = function() {};
-console.log("Typeof = " + typeof Cliente); // "function"
+console.log("typeof = " + typeof Cliente); // "function"
 console.log("typeof new = " + typeof new Cliente()); // "object"
 ```
 

@@ -57,3 +57,23 @@ console.log(valores.length)  // 11
 delete valores[0]
 console.log(valores)  // [ <1 empty item>, 8.9, 6.3, 9.2, 10.5, {id: 3}, false, null, {id: 3}, false, null ]
 console.log(typeof valores)  // 'object'
+
+
+
+let notas = [7.5, 8.0, 6.5, 9.0];
+
+// Adicionando uma nova nota
+notas.push(10);
+
+// Removendo a primeira nota
+notas.shift();
+
+// Calculando a média das notas
+let soma = 0;
+notas.forEach(function(nota) {
+  soma += nota;
+});
+let media = soma / notas.length;
+
+console.log("Notas:", notas);
+console.log("Média:", media.toFixed(2));
