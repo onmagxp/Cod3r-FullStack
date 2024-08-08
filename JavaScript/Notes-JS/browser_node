@@ -1,0 +1,110 @@
+### Aula: Contexto de Execução em JavaScript: Browser vs Node.js
+
+#### 1. Introdução ao Contexto de Execução
+
+Em JavaScript, o **contexto de execução** refere-se ao ambiente onde o código é executado. Esse ambiente influencia como o código é interpretado, quais APIs estão disponíveis e como as variáveis e objetos globais são gerenciados.
+
+Os dois principais contextos de execução que você encontrará são:
+- **Browser (Navegador)**: Onde o JavaScript é executado diretamente em uma página web.
+- **Node.js**: Um ambiente de execução que permite executar JavaScript fora do navegador, geralmente no lado do servidor.
+
+Embora JavaScript seja a mesma linguagem em ambos os ambientes, o contexto em que ele é executado muda significativamente o comportamento e as capacidades do código.
+
+#### 2. Contexto de Execução no Browser
+
+Quando você executa JavaScript em um navegador (como Chrome, Firefox ou Safari), o contexto de execução tem características específicas:
+
+- **Objeto Global**: No navegador, o objeto global é chamado `window`. Todas as variáveis globais, funções, e objetos são propriedades desse objeto.
+  
+  ```javascript
+  var nome = "Matheus";
+  console.log(window.nome); // "Matheus"
+  ```
+
+- **DOM (Document Object Model)**: O navegador fornece APIs para interagir com a estrutura de uma página HTML. Você pode manipular elementos, adicionar eventos e alterar estilos.
+
+  ```javascript
+  document.getElementById('meuElemento').innerText = "Texto atualizado!";
+  ```
+
+- **Eventos e Interações**: O browser permite que você responda a eventos do usuário, como cliques, toques, ou teclas pressionadas.
+
+  ```javascript
+  document.addEventListener('click', function() {
+      alert("Você clicou na página!");
+  });
+  ```
+
+- **APIs Específicas do Browser**: APIs como `fetch`, `localStorage`, `sessionStorage`, e `Geolocation` estão disponíveis para interagir com a rede, armazenar dados localmente e acessar a localização do usuário.
+
+  ```javascript
+  localStorage.setItem('chave', 'valor');
+  ```
+
+#### 3. Contexto de Execução no Node.js
+
+Node.js é um ambiente de execução JavaScript no lado do servidor. Ele foi construído sobre o motor V8 do Chrome, mas com características que o tornam adequado para aplicações fora do navegador.
+
+- **Objeto Global**: Em Node.js, o objeto global é chamado `global`. No entanto, ao contrário do navegador, variáveis declaradas com `var`, `let`, ou `const` dentro de um arquivo não se tornam propriedades de `global`.
+
+  ```javascript
+  var nome = "Matheus";
+  console.log(global.nome); // undefined
+  ```
+
+- **Módulos**: Node.js usa um sistema de módulos para organizar e reutilizar código. Cada arquivo é um módulo, e você pode importar e exportar funcionalidades usando `require` e `module.exports`.
+
+  ```javascript
+  // modulo.js
+  module.exports = {
+      saudacao: function() {
+          return "Olá do módulo!";
+      }
+  };
+
+  // app.js
+  const modulo = require('./modulo');
+  console.log(modulo.saudacao()); // "Olá do módulo!"
+  ```
+
+- **APIs Específicas do Node.js**: Node.js oferece APIs para interagir com o sistema de arquivos (`fs`), fazer requisições HTTP (`http`), e muito mais.
+
+  ```javascript
+  const fs = require('fs');
+
+  fs.writeFile('teste.txt', 'Hello Node.js!', (err) => {
+      if (err) throw err;
+      console.log('Arquivo criado!');
+  });
+  ```
+
+- **Execução Assíncrona**: Embora o JavaScript no navegador também suporte assíncrono, Node.js foi projetado para operações não bloqueantes, permitindo que você manipule grandes volumes de I/O (entrada e saída) sem travar a execução do código.
+
+  ```javascript
+  const http = require('http');
+
+  http.createServer((req, res) => {
+      res.writeHead(200, {'Content-Type': 'text/plain'});
+      res.end('Hello Node.js\n');
+  }).listen(3000);
+
+  console.log('Servidor rodando em http://localhost:3000/');
+  ```
+
+#### 4. Comparação Entre Browser e Node.js
+
+| Característica       | Browser                                         | Node.js                                          |
+|----------------------|-------------------------------------------------|--------------------------------------------------|
+| **Objeto Global**    | `window`                                        | `global`                                         |
+| **Manipulação DOM**  | Sim (via `document`)                            | Não (sem DOM, mas pode usar bibliotecas como `jsdom`) |
+| **Eventos**          | Sim (cliques, teclado, etc.)                    | Não (mas há eventos para sistemas de arquivos, rede, etc)
+| **APIs**             | `fetch`, `localStorage`, `sessionStorage`, etc. | `fs`, `http`, `os`, `path`, entre outros         |
+| **Sistema de Módulos** | Não (usando ES6 `import/export`, sim)           | Sim (`require`, `module.exports`)                 |
+| **Execução**         | Geralmente em uma única aba ou janela           | Executado em servidores, scripts, ou CLIs        |
+
+
+#### 5. Conclusão
+
+Entender o contexto de execução em JavaScript é fundamental para escrever código eficiente e apropriado para o ambiente em que está sendo executado. Enquanto o navegador oferece interatividade e manipulação de conteúdo web, Node.js traz o poder de JavaScript para o lado do servidor, com acesso direto ao sistema de arquivos, redes, e muito mais.
+
+Esses dois ambientes ampliam consideravelmente o que você pode fazer com JavaScript, permitindo desenvolver tanto aplicações front-end dinâmicas quanto back-ends robustos e escaláveis.
