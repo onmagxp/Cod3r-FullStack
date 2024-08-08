@@ -1,0 +1,200 @@
+Vamos criar uma aula bem didática sobre operadores unários em JavaScript, com explicações simples e analogias para facilitar o entendimento.
+
+### Aula: Operadores Unários em JavaScript
+
+#### 1. Introdução aos Operadores Unários
+Operadores unários são operadores que operam em apenas um operando. Eles são usados para realizar várias operações simples, como incrementação, decrementação, negação lógica e aritmética.
+
+#### 2. Tipos de Operadores Unários
+
+Vamos explorar os principais operadores unários em JavaScript:
+
+1. **Incremento (`++`)**
+2. **Decremento (`--`)**
+3. **Negação lógica (`!`)**
+4. **Negação aritmética (`-`)**
+5. **Tipo (`typeof`)**
+6. **Deleção (`delete`)**
+7. **Verdadeiro Boolean (`void`)**
+
+#### 3. Incremento (`++`)
+
+##### Analogias
+Pense no incremento como uma escada. Cada vez que você usa o operador de incremento, você sobe um degrau.
+
+```javascript
+let a = 5;
+a++; // a = a + 1
+console.log(a); // 6
+```
+
+Existem duas formas de incremento:
+- **Pós-incremento (`a++`)**: Retorna o valor original e depois incrementa.
+- **Pré-incremento (`++a`)**: Incrementa primeiro e depois retorna o valor incrementado.
+
+```javascript
+let b = 5;
+console.log(b++); // 5 -> Retorna o valor original e depois incrementa
+console.log(b); // 6 -> Valor após incremento
+
+let c = 5;
+console.log(++c); // 6 -> Incrementa primeiro e depois retorna o valor incrementado
+```
+
+#### 4. Decremento (`--`)
+
+##### Analogias
+Pense no decremento como uma descida de escada. Cada vez que você usa o operador de decremento, você desce um degrau.
+
+```javascript
+let d = 5;
+d--; // d = d - 1
+console.log(d); // 4
+```
+
+Assim como no incremento, existem duas formas de decremento:
+- **Pós-decremento (`d--`)**: Retorna o valor original e depois decrementa.
+- **Pré-decremento (`--d`)**: Decrementa primeiro e depois retorna o valor decrementado.
+
+```javascript
+let e = 5;
+console.log(e--); // 5 -> Retorna o valor original e depois decrementa
+console.log(e); // 4 -> Valor após decremento
+
+let f = 5;
+console.log(--f); // 4 -> Decrementa primeiro e depois retorna o valor decrementado
+```
+
+#### 5. Negação Lógica (`!`)
+
+##### Analogias
+Pense na negação lógica como um interruptor de luz. Se a luz está acesa (verdadeira), a negação a apaga (falsa) e vice-versa.
+
+```javascript
+let isTrue = true;
+console.log(!isTrue); // false -> Inverte o valor booleano
+
+let isFalse = false;
+console.log(!isFalse); // true -> Inverte o valor booleano
+```
+
+#### 6. Negação Aritmética (`-`)
+
+##### Analogias
+Pense na negação aritmética como inverter o sinal de um número. Se o número é positivo, ele se torna negativo e vice-versa.
+
+```javascript
+let num = 10;
+console.log(-num); // -10 -> Inverte o sinal
+
+let negNum = -10;
+console.log(-negNum); // 10 -> Inverte o sinal
+```
+
+#### 7. Tipo (`typeof`)
+
+##### Analogias
+Pense em `typeof` como um detector de tipo. Ele nos diz qual o tipo do valor ou variável que estamos analisando.
+
+```javascript
+let g = 10;
+console.log(typeof g); // 'number' -> Tipo número
+
+let h = 'Hello';
+console.log(typeof h); // 'string' -> Tipo string
+```
+
+#### 8. Deleção (`delete`)
+
+##### Analogias
+Pense em `delete` como um apagador. Ele remove uma propriedade de um objeto.
+
+```javascript
+let obj = { nome: 'Ana', idade: 30 };
+delete obj.idade; // Remove a propriedade idade
+console.log(obj); // { nome: 'Ana' } -> A propriedade idade foi removida
+```
+
+#### 9. Void
+
+##### Analogias
+Pense em `void` como uma ferramenta para descartar o valor de uma expressão e retornar `undefined`.
+
+```javascript
+console.log(void 0); // undefined -> Garante que a expressão retorne undefined
+
+let i = 10;
+console.log(void (i = 20)); // undefined -> Garante que a expressão retorne undefined, mesmo que a variável seja modificada
+```
+
+### Resumo
+Os operadores unários em JavaScript são ferramentas úteis que nos permitem realizar operações simples em apenas um operando. Eles incluem incremento, decremento, negação lógica e aritmética, verificação de tipo, deleção e uso de `void`.
+
+### Código Completo com Comentários
+
+Aqui está o código completo com comentários explicativos:
+
+```javascript
+// Incremento
+let a = 5;
+a++; // a = a + 1
+console.log(a); // 6
+
+// Pós-incremento
+let b = 5;
+console.log(b++); // 5 -> Retorna o valor original e depois incrementa
+console.log(b); // 6 -> Valor após incremento
+
+// Pré-incremento
+let c = 5;
+console.log(++c); // 6 -> Incrementa primeiro e depois retorna o valor incrementado
+
+// Decremento
+let d = 5;
+d--; // d = d - 1
+console.log(d); // 4
+
+// Pós-decremento
+let e = 5;
+console.log(e--); // 5 -> Retorna o valor original e depois decrementa
+console.log(e); // 4 -> Valor após decremento
+
+// Pré-decremento
+let f = 5;
+console.log(--f); // 4 -> Decrementa primeiro e depois retorna o valor decrementado
+
+// Negação Lógica
+let isTrue = true;
+console.log(!isTrue); // false -> Inverte o valor booleano
+
+let isFalse = false;
+console.log(!isFalse); // true -> Inverte o valor booleano
+
+// Negação Aritmética
+let num = 10;
+console.log(-num); // -10 -> Inverte o sinal
+
+let negNum = -10;
+console.log(-negNum); // 10 -> Inverte o sinal
+
+// Tipo
+let g = 10;
+console.log(typeof g); // 'number' -> Tipo número
+
+let h = 'Hello';
+console.log(typeof h); // 'string' -> Tipo string
+
+// Deleção
+let obj = { nome: 'Ana', idade: 30 };
+delete obj.idade; // Remove a propriedade idade
+console.log(obj); // { nome: 'Ana' } -> A propriedade idade foi removida
+
+// Void
+console.log(void 0); // undefined -> Garante que a expressão retorne undefined
+
+let i = 10;
+console.log(void (i = 20)); // undefined -> Garante que a expressão retorne undefined, mesmo que a variável seja modificada
+```
+
+### Conclusão
+Os operadores unários são fundamentais para manipulação de valores e variáveis em JavaScript. Compreender seu funcionamento permite escrever código mais eficiente e expressivo.

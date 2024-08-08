@@ -1,0 +1,172 @@
+Vamos criar uma aula didática e fácil de entender sobre os operadores aritméticos em JavaScript.
+
+### Aula: Operadores Aritméticos em JavaScript
+
+#### 1. Introdução aos Operadores Aritméticos
+
+Os operadores aritméticos em JavaScript são usados para realizar operações matemáticas básicas, como adição, subtração, multiplicação, divisão e módulo. Eles são fundamentais para realizar cálculos e manipular números em programação.
+
+#### 2. Principais Operadores Aritméticos
+
+Aqui estão os operadores aritméticos que veremos nesta aula:
+
+1. **Adição (`+`)**
+2. **Subtração (`-`)**
+3. **Multiplicação (`*`)**
+4. **Divisão (`/`)**
+5. **Módulo (`%`)**
+6. **Exponenciação (`**`)**
+
+#### 3. Adição (`+`)
+
+##### Analogias
+Pense na adição como somar ingredientes em uma receita. Se você tem 2 maçãs e adiciona mais 3, agora você tem 5 maçãs.
+
+```javascript
+let a = 2;
+let b = 3;
+let soma = a + b;
+console.log(soma); // 5 -> Soma de 2 + 3
+```
+
+##### Usos
+
+- **Números**: Quando ambos os operandos são números, o operador `+` soma os dois.
+- **Strings**: Quando um dos operandos é uma string, o operador `+` concatena (junta) as strings.
+
+```javascript
+let x = "Olá, ";
+let y = "Mundo!";
+let saudacao = x + y;
+console.log(saudacao); // "Olá, Mundo!" -> Concatenação de strings
+```
+
+#### 4. Subtração (`-`)
+
+##### Analogias
+A subtração é como tirar ingredientes de uma receita. Se você tem 5 maçãs e usa 2, agora você tem 3 maçãs.
+
+```javascript
+let c = 5;
+let d = 2;
+let subtracao = c - d;
+console.log(subtracao); // 3 -> Subtração de 5 - 2
+```
+
+##### Usos
+
+- **Números**: O operador `-` subtrai o segundo operando do primeiro.
+
+#### 5. Multiplicação (`*`)
+
+##### Analogias
+A multiplicação é como duplicar ingredientes. Se você tem 3 receitas, cada uma usando 2 maçãs, você precisará de 6 maçãs no total.
+
+```javascript
+let e = 3;
+let f = 4;
+let multiplicacao = e * f;
+console.log(multiplicacao); // 12 -> Multiplicação de 3 * 4
+```
+
+##### Usos
+
+- **Números**: O operador `*` multiplica os dois operandos.
+
+#### 6. Divisão (`/`)
+
+##### Analogias
+A divisão é como dividir um bolo entre amigos. Se você tem 8 fatias e 4 amigos, cada um recebe 2 fatias.
+
+```javascript
+let g = 8;
+let h = 2;
+let divisao = g / h;
+console.log(divisao); // 4 -> Divisão de 8 / 2
+```
+
+##### Usos
+
+- **Números**: O operador `/` divide o primeiro operando pelo segundo.
+
+#### 7. Módulo (`%`)
+
+##### Analogias
+O módulo é como a sobra após dividir um bolo. Se você tem 10 fatias e 3 amigos, cada um recebe 3 fatias, e sobra 1 fatia.
+
+```javascript
+let i = 10;
+let j = 3;
+let modulo = i % j;
+console.log(modulo); // 1 -> Resto da divisão de 10 / 3
+```
+
+##### Usos
+
+- **Números**: O operador `%` retorna o resto da divisão entre os dois operandos.
+
+#### 8. Exponenciação (`**`)
+
+##### Analogias
+A exponenciação é como elevar algo a um poder. Se você tem 2^3 (dois elevado à terceira potência), você multiplica 2 por ele mesmo três vezes: 2 * 2 * 2 = 8.
+
+```javascript
+let k = 2;
+let l = 3;
+let potencia = k ** l;
+console.log(potencia); // 8 -> 2 elevado à potência 3 (2^3)
+```
+
+##### Usos
+
+- **Números**: O operador `**` eleva o primeiro operando à potência do segundo.
+
+### Resumo
+
+Os operadores aritméticos em JavaScript permitem realizar cálculos matemáticos básicos. Eles são essenciais para manipular números em diferentes contextos, como adicionar valores, subtrair, multiplicar, dividir, encontrar o resto de uma divisão e elevar números a uma potência.
+
+### Código Completo com Comentários
+
+Aqui está o código completo com exemplos para cada operador aritmético:
+
+```javascript
+// Adição
+let a = 2;
+let b = 3;
+let soma = a + b;
+console.log(soma); // 5 -> Soma de 2 + 3
+
+// Subtração
+let c = 5;
+let d = 2;
+let subtracao = c - d;
+console.log(subtracao); // 3 -> Subtração de 5 - 2
+
+// Multiplicação
+let e = 3;
+let f = 4;
+let multiplicacao = e * f;
+console.log(multiplicacao); // 12 -> Multiplicação de 3 * 4
+
+// Divisão
+let g = 8;
+let h = 2;
+let divisao = g / h;
+console.log(divisao); // 4 -> Divisão de 8 / 2
+
+// Módulo
+let i = 10;
+let j = 3;
+let modulo = i % j;
+console.log(modulo); // 1 -> Resto da divisão de 10 / 3
+
+// Exponenciação
+let k = 2;
+let l = 3;
+let potencia = k ** l;
+console.log(potencia); // 8 -> 2 elevado à potência 3 (2^3)
+```
+
+### Conclusão
+
+Compreender os operadores aritméticos é fundamental para realizar cálculos e operações matemáticas em JavaScript. Eles permitem manipular valores numéricos de maneira eficiente, facilitando o desenvolvimento de aplicações que necessitam de cálculos precisos.

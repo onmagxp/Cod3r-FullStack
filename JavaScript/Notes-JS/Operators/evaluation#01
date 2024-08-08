@@ -1,0 +1,92 @@
+Aqui está uma avaliação que abrange todos os conteúdos das aulas que foram criadas anteriormente, com pelo menos duas questões sobre cada tópico. O objetivo é que o aluno escreva o código que resolve cada problema proposto.
+
+---
+
+### Avaliação de JavaScript: Operadores e Conceitos Fundamentais
+
+#### Instruções:
+- Para cada questão, escreva o código em JavaScript que resolve o problema descrito.
+- Tente escrever o código de forma clara e concisa, utilizando os conceitos aprendidos.
+
+---
+
+#### 1. **Operadores Aritméticos**
+
+**Questão 1.1:**  
+Crie uma função chamada `calculaOperacoes` que recebe dois números como argumentos e retorna um objeto com os resultados das seguintes operações aritméticas: soma, subtração, multiplicação e divisão.
+
+**Questão 1.2:**  
+Escreva um código que calcula o resto da divisão de dois números e eleva o primeiro número ao quadrado, utilizando operadores aritméticos. Mostre ambos os resultados no console.
+
+---
+
+#### 2. **Operadores Relacionais**
+
+**Questão 2.1:**  
+Escreva uma função `verificaMaioridade` que recebe a idade de uma pessoa como argumento e retorna `true` se a pessoa for maior de idade (18 anos ou mais) e `false` caso contrário.
+
+**Questão 2.2:**  
+Crie um código que compara três números e retorna `true` se o primeiro número for o maior de todos. Caso contrário, deve retornar `false`.
+
+---
+
+#### 3. **Operadores de Igualdade**
+
+**Questão 3.1:**  
+Escreva um código que compara duas variáveis, `a` e `b`, utilizando o operador de igualdade estrita (`===`). Se as variáveis forem iguais, exiba "São iguais", caso contrário, exiba "São diferentes".
+
+**Questão 3.2:**  
+Crie um código que verifica se uma variável `x` não é igual (`!=`) a uma variável `y`. Mostre uma mensagem no console indicando se `x` e `y` são diferentes.
+
+---
+
+#### 4. **Operadores Lógicos**
+
+**Questão 4.1:**  
+Crie uma função chamada `podeDirigir` que recebe duas variáveis booleanas: `temCarteira` e `semAlcool`. A função deve retornar `true` se a pessoa tem carteira e não consumiu álcool, e `false` caso contrário.
+
+**Questão 4.2:**  
+Escreva um código que verifica se uma pessoa pode entrar em uma festa. Ela pode entrar se estiver com um convite válido (`temConvite`) **ou** se estiver na lista de convidados (`naLista`). Caso contrário, exiba "Entrada negada".
+
+---
+
+#### 5. **Operador Ternário**
+
+**Questão 5.1:**  
+Escreva um código que verifica a temperatura e usa o operador ternário para definir se o dia está "Quente" ou "Frio". Considere que a temperatura abaixo de 20°C é considerada "Frio".
+
+**Questão 5.2:**  
+Crie uma variável `salario` e atribua a ela o valor 5000. Use o operador ternário para calcular um bônus de 10% se o salário for menor que 6000, e de 5% caso contrário. Exiba o valor do bônus no console.
+
+---
+
+#### 6. **Operadores de Atribuição**
+
+**Questão 6.1:**  
+Escreva um código que inicializa uma variável `total` com o valor 100. Em seguida, use operadores de atribuição para:
+- Subtrair 20 do valor de `total`.
+- Multiplicar o valor de `total` por 2.
+- Exibir o resultado final de `total` no console.
+
+**Questão 6.2:**  
+Crie uma função `incrementaNumero` que recebe um número e retorna o resultado de adicionar 10 a ele utilizando o operador `+=`.
+
+---
+
+#### 7. **Operadores Unários**
+
+**Questão 7.1:**  
+Escreva um código que inicializa uma variável `contador` com o valor 10. Em seguida, use o operador unário de incremento (`++`) para aumentar o valor de `contador` em 1. Exiba o valor de `contador` no console.
+
+**Questão 7.2:**  
+Crie uma função `inverteSinal` que recebe um número como argumento e retorna o valor invertido (positivo para negativo e negativo para positivo) utilizando o operador unário de negação (`-`).
+
+---
+
+### **Conclusão**
+
+Parabéns por completar a avaliação! Revise suas respostas para garantir que seu código esteja correto e siga as boas práticas de programação.
+
+---
+
+Esta avaliação cobre todos os operadores e conceitos discutidos nas aulas, incentivando a prática dos conteúdos aprendidos através de problemas que simulam situações reais de programação.

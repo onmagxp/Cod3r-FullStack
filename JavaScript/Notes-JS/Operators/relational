@@ -1,0 +1,130 @@
+Vamos criar uma aula didática e fácil de entender sobre os operadores relacionais em JavaScript.
+
+### Aula: Operadores Relacionais em JavaScript
+
+#### 1. Introdução aos Operadores Relacionais
+
+Os operadores relacionais são usados para comparar dois valores e determinar a relação entre eles. O resultado dessas comparações é sempre um valor booleano (`true` ou `false`). Esses operadores são fundamentais para a tomada de decisões em programação, como em estruturas condicionais (`if`, `else`).
+
+#### 2. Principais Operadores Relacionais
+
+Aqui estão os operadores relacionais que veremos nesta aula:
+
+1. **Maior que (`>`)**
+2. **Maior ou igual a (`>=`)**
+3. **Menor que (`<`)**
+4. **Menor ou igual a (`<=`)**
+
+#### 3. Maior que (`>`)
+
+##### Analogias
+Pense no operador "maior que" como uma competição de altura. Se você comparar duas pessoas, a mais alta "vence". Se Maria tem 1,70m e João tem 1,65m, Maria é maior que João.
+
+```javascript
+let a = 10;
+let b = 5;
+console.log(a > b); // true -> 10 é maior que 5
+```
+
+##### Usos
+- **Números**: Compara se o primeiro número é maior que o segundo.
+
+```javascript
+let c = 3;
+let d = 7;
+console.log(c > d); // false -> 3 não é maior que 7
+```
+
+#### 4. Maior ou igual a (`>=`)
+
+##### Analogias
+Pense no "maior ou igual a" como uma competição de altura onde empates são permitidos. Se Maria tem 1,70m e João também tem 1,70m, então Maria é "maior ou igual a" João.
+
+```javascript
+let e = 10;
+let f = 10;
+console.log(e >= f); // true -> 10 é maior ou igual a 10
+```
+
+##### Usos
+- **Números**: Verifica se o primeiro número é maior ou igual ao segundo.
+
+```javascript
+let g = 8;
+let h = 8;
+console.log(g >= h); // true -> 8 é maior ou igual a 8
+```
+
+#### 5. Menor que (`<`)
+
+##### Analogias
+Pense no operador "menor que" como uma competição onde você procura o menor número. Se João tem 1,60m e Maria tem 1,65m, João é menor que Maria.
+
+```javascript
+let i = 5;
+let j = 10;
+console.log(i < j); // true -> 5 é menor que 10
+```
+
+##### Usos
+- **Números**: Compara se o primeiro número é menor que o segundo.
+
+```javascript
+let k = 12;
+let l = 7;
+console.log(k < l); // false -> 12 não é menor que 7
+```
+
+#### 6. Menor ou igual a (`<=`)
+
+##### Analogias
+Pense no "menor ou igual a" como um jogo onde empates são válidos para o menor lado. Se João tem 1,60m e Maria tem 1,60m, João é "menor ou igual a" Maria.
+
+```javascript
+let m = 5;
+let n = 5;
+console.log(m <= n); // true -> 5 é menor ou igual a 5
+```
+
+##### Usos
+- **Números**: Verifica se o primeiro número é menor ou igual ao segundo.
+
+```javascript
+let o = 3;
+let p = 4;
+console.log(o <= p); // true -> 3 é menor ou igual a 4
+```
+
+### Resumo
+
+Os operadores relacionais em JavaScript são usados para comparar dois valores. O resultado dessas comparações é um valor booleano (`true` ou `false`). Eles são essenciais para criar condições lógicas no seu código.
+
+### Código Completo com Comentários
+
+Aqui está o código completo com exemplos para cada operador relacional:
+
+```javascript
+// Maior que
+let a = 10;
+let b = 5;
+console.log(a > b); // true -> 10 é maior que 5
+
+// Maior ou igual a
+let e = 10;
+let f = 10;
+console.log(e >= f); // true -> 10 é maior ou igual a 10
+
+// Menor que
+let i = 5;
+let j = 10;
+console.log(i < j); // true -> 5 é menor que 10
+
+// Menor ou igual a
+let m = 5;
+let n = 5;
+console.log(m <= n); // true -> 5 é menor ou igual a 5
+```
+
+### Conclusão
+
+Compreender os operadores relacionais é essencial para comparar valores e tomar decisões no seu código. Esses operadores são usados constantemente em estruturas de controle, como `if` e `while`, tornando-se indispensáveis para a lógica de programação.
