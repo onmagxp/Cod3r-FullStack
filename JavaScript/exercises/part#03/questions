@@ -1,0 +1,52 @@
+### Parte 3: Estruturas de Controle Avançadas e Combinações
+
+#### **Exercícios:**
+
+1. **Funções Aninhadas**
+   - **Exercício:** Crie uma função `processarTurma` que recebe um array de objetos representando alunos e faz o seguinte:
+     - Chama uma função `calcularMedia` que retorna a média das notas.
+     - Chama uma função `filtrarAprovados` para criar um novo array com apenas os alunos aprovados.
+     - Retorna um objeto contendo a média da turma e o array de aprovados.
+   - **Dica:** Reaproveite as funções criadas nos exercícios anteriores dentro da função `processarTurma`.
+
+2. **Função com Estrutura Condicional e Arrays**
+   - **Exercício:** Crie uma função `classificarTurma` que recebe um array de objetos representando alunos e retorna uma string com a classificação geral da turma:
+     - "Excelente" se a média for maior ou igual a 9.
+     - "Boa" se a média for maior ou igual a 7.
+     - "Regular" se a média for maior ou igual a 5.
+     - "Insuficiente" se a média for menor que 5.
+   - **Dica:** Combine `calcularMedia` com uma estrutura condicional `if/else if/else`.
+
+3. **Combinação de Funções e Loops**
+   - **Exercício:** Crie uma função `relatorioDeNotas` que recebe um array de objetos representando alunos e:
+     - Cria um novo array com strings no formato: "Nome do Aluno: Nota", ordenados pela nota em ordem decrescente.
+     - Retorna o array de strings.
+   - **Dica:** Use `map()` para transformar os objetos em strings, `sort()` para ordenar o array, e `reverse()` para inverter a ordem.
+
+4. **Função com Múltiplas Estruturas de Controle**
+   - **Exercício:** Crie uma função `detalharAluno` que recebe um array de objetos representando alunos e o nome de um aluno. A função deve:
+     - Procurar o aluno no array e, se encontrado, retornar uma string detalhando o nome e a nota.
+     - Se não encontrado, retornar "Aluno não encontrado".
+   - **Dica:** Use `find()` ou um loop `for` para procurar o aluno e uma estrutura `if/else` para a condição.
+
+5. **Combinação de `for...in` com Objetos**
+   - **Exercício:** Crie uma função `listarPropriedades` que recebe um objeto qualquer e imprime no console todas as propriedades e seus valores.
+   - **Dica:** Use um loop `for...in` para iterar sobre as propriedades do objeto.
+
+6. **Função Recursiva com Estruturas de Controle**
+   - **Exercício:** Crie uma função `fatorial` que calcula o fatorial de um número dado. A função deve chamar a si mesma para multiplicar o número por cada um dos inteiros menores que ele.
+   - **Dica:** Use uma estrutura condicional para definir a base da recursão (por exemplo, `if(n <= 1)` retorna 1) e a chamada recursiva para continuar o cálculo.
+
+7. **Análise de Dados com Arrays e Objetos**
+   - **Exercício:** Crie uma função `analiseTurma` que recebe um array de objetos representando alunos e:
+     - Retorna um objeto contendo o número total de alunos, o número de aprovados, e o número de reprovados.
+   - **Dica:** Use loops, condicionais e contadores para realizar essa análise.
+
+8. **Uso de `continue` e `break` em Loops**
+   - **Exercício:** Crie uma função `encontrarAlunoPorNota` que percorre um array de objetos representando alunos e retorna o nome do primeiro aluno com nota igual a 10. Use `break` para parar o loop assim que encontrar.
+   - **Exercício Extra:** Modifique a função para que ignore notas menores que 5 usando `continue`.
+   - **Dica:** `break` interrompe o loop, e `continue` pula para a próxima iteração.
+
+---
+
+Essa lista de exercícios foi criada para cobrir e reforçar os conceitos fundamentais de JavaScript que vimos até agora. Pratique cada exercício com calma, e se encontrar dificuldades, releia os conceitos ou experimente soluções diferentes. Cada exercício está projetado para construir seu entendimento progressivamente, partindo de estruturas simples até combinações mais complexas. Boa prática!
