@@ -1,0 +1,45 @@
+### Parte 2: Arrays e Objetos
+
+#### **Tipos de Dados Utilizados:**
+- **`array`**: Uma lista ordenada de elementos.
+- **`object`**: Coleção de pares chave-valor.
+
+#### **Exercícios:**
+
+1. **Manipulando Arrays**
+   - **Exercício:** Crie uma função `adicionarNome` que recebe um array de nomes e um novo nome como parâmetros. A função deve adicionar o novo nome ao final do array e retornar o array atualizado.
+   - **Dica:** Use o método `push()` para adicionar o nome ao array.
+
+2. **Iterando sobre Arrays**
+   - **Exercício:** Crie uma função `imprimirNomes` que recebe um array de nomes e imprime cada nome no console.
+   - **Dica:** Use um loop `for` para iterar sobre o array.
+
+3. **Procurando em Arrays**
+   - **Exercício:** Crie uma função `procurarNome` que recebe um array de nomes e um nome como parâmetros. A função deve verificar se o nome está presente no array e retornar "Nome encontrado" ou "Nome não encontrado".
+   - **Dica:** Use um loop `for` ou o método `includes()` para procurar o nome.
+
+4. **Trabalhando com Objetos**
+   - **Exercício:** Crie uma função `adicionarAluno` que recebe um array de objetos representando alunos (com `nome` e `nota`) e um novo objeto aluno. A função deve adicionar o novo aluno ao array e retornar o array atualizado.
+   - **Dica:** Similar ao exercício de adicionar nome, mas aqui o novo elemento é um objeto.
+
+5. **Iterando sobre Arrays de Objetos**
+   - **Exercício:** Crie uma função `imprimirNotas` que recebe um array de objetos representando alunos e imprime o nome e a nota de cada aluno no console.
+   - **Dica:** Use um loop `for` e a notação de ponto (`.`) para acessar as propriedades `nome` e `nota` dos objetos.
+
+6. **Calculando Média de Notas**
+   - **Exercício:** Crie uma função `calcularMedia` que recebe um array de objetos representando alunos e retorna a média das notas.
+   - **Dica:** Use um loop `for` para somar as notas e depois divida pela quantidade de alunos.
+
+7. **Filtrando Objetos em Arrays**
+   - **Exercício:** Crie uma função `filtrarAprovados` que recebe um array de objetos representando alunos e retorna um novo array com apenas os alunos que foram aprovados (nota >= 7).
+   - **Dica:** Use o método `filter()` para criar o novo array.
+
+8. **Combinação de Arrays e Objetos**
+   - **Exercício:** Crie uma função `listaDePresenca` que recebe dois arrays: um de objetos representando alunos e outro de nomes de alunos presentes. A função deve retornar um novo array de objetos representando apenas os alunos presentes com suas respectivas notas.
+   - **Dica:** Combine o uso de `filter()` e `includes()` para comparar os arrays.
+
+### **Parte 3: Estruturas de Controle Avançadas e Combinações**
+
+Agora, vamos combinar funções mais complexas e misturar diferentes estruturas, arrays, e objetos para criar exercícios mais desafiadores.
+
+(Parte 3 será enviada na próxima mensagem)

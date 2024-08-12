@@ -1,0 +1,51 @@
+Vamos dividir essa lista de exercícios/aprendizado em três partes, como você pediu. Vou criar uma lista completa que inclui o uso de estruturas de controle, funções, arrays, objetos, e todas as outras ferramentas que vimos nas aulas anteriores. Vou também incluir as explicações para os tipos de dados que vão ser utilizados, para que você possa revisar caso esqueça.
+
+### Parte 1: Estruturas de Controle Básicas e Funções
+
+#### **Tipos de Dados Utilizados:**
+- **`number`**: Números inteiros ou decimais.
+- **`string`**: Sequência de caracteres (texto).
+- **`boolean`**: Verdadeiro (`true`) ou falso (`false`).
+- **`array`**: Uma lista ordenada de elementos.
+- **`object`**: Coleção de pares chave-valor.
+
+#### **Exercícios:**
+
+1. **Condicional Simples (`if/else`)**
+   - **Exercício:** Escreva uma função `verificarIdade` que recebe um número representando a idade de uma pessoa e retorna "Maior de idade" se a idade for maior ou igual a 18 e "Menor de idade" caso contrário.
+   - **Dica:** Use a estrutura `if/else`.
+   - **Extra:** Teste a função com diferentes valores para ver se está funcionando corretamente.
+
+2. **Condicional com Múltiplas Condições (`if/else if/else`)**
+   - **Exercício:** Crie uma função `classificarNota` que recebe uma nota de 0 a 10 e retorna "Excelente" se a nota for maior ou igual a 9, "Bom" se for maior ou igual a 7, "Regular" se for maior ou igual a 5, e "Reprovado" se for menor que 5.
+   - **Dica:** Use `if/else if/else` para testar cada condição.
+
+3. **Switch Case**
+   - **Exercício:** Crie uma função `diaDaSemana` que recebe um número de 1 a 7 e retorna o nome do dia correspondente (por exemplo, 1 = "Domingo", 2 = "Segunda-feira", etc.).
+   - **Dica:** Use a estrutura `switch` para resolver o problema.
+
+4. **Loop `for` Básico**
+   - **Exercício:** Escreva uma função `contarDe1a10` que imprime todos os números de 1 a 10 no console.
+   - **Dica:** Use um loop `for` para repetir a ação de imprimir.
+
+5. **Loop `while` Básico**
+   - **Exercício:** Escreva uma função `contarAteNumero` que recebe um número `n` e imprime todos os números de 1 até `n`.
+   - **Dica:** Use um loop `while` para repetir até que a condição seja atendida.
+
+6. **Função dentro de Estrutura de Controle**
+   - **Exercício:** Crie uma função `imprimirParesOuImpares` que recebe um número `n` e, para cada número de 1 até `n`, imprime "Par" se o número for par e "Ímpar" se o número for ímpar.
+   - **Dica:** Use `for`, `if/else`, e uma função dentro da estrutura para verificar se o número é par ou ímpar.
+
+7. **Função com `return` em Estrutura de Controle**
+   - **Exercício:** Crie uma função `encontrarMaiorNumero` que recebe dois números e retorna o maior entre eles.
+   - **Dica:** Use `if/else` para comparar os números e `return` para retornar o maior.
+
+8. **Função com Operador Ternário**
+   - **Exercício:** Crie uma função `verificarParidade` que recebe um número e retorna "Par" se o número for par e "Ímpar" se for ímpar, utilizando o operador ternário.
+   - **Dica:** Substitua a estrutura `if/else` por um operador ternário.
+
+### **Parte 2: Arrays e Objetos**
+
+Na próxima parte, vamos aprofundar o uso de arrays, objetos e a combinação desses elementos dentro das estruturas de controle e funções. Isso permitirá trabalhar com conjuntos de dados mais complexos e dinâmicos. Você verá como manipular e acessar elementos dentro de arrays e objetos, e como utilizar loops para iterar sobre esses elementos.
+
+(Parte 2 será enviada na próxima mensagem)
