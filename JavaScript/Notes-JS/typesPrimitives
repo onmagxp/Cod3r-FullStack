@@ -1,0 +1,144 @@
+### Aula Super Didática: Tipos Primitivos em JavaScript
+
+---
+
+#### **Introdução**
+
+Em JavaScript, os tipos primitivos são os blocos de construção mais básicos para representar dados. Eles são chamados de "primitivos" porque são os tipos de dados mais simples e fundamentais que você pode usar. Vamos entender o que são esses tipos primitivos, com analogias fáceis de entender e exemplos práticos.
+
+### **1. O que são Tipos Primitivos?**
+
+Pense nos tipos primitivos como ingredientes básicos de uma receita. Se você fosse cozinhar, os tipos primitivos seriam como o sal, a água e o açúcar: são coisas simples e puras, que não podem ser quebradas em partes menores. Em JavaScript, os tipos primitivos são valores que não têm métodos ou propriedades (com exceção de `string`), e uma vez criados, não podem ser alterados diretamente.
+
+### **2. Os Tipos Primitivos em JavaScript**
+
+JavaScript possui sete tipos primitivos:
+
+1. **`string`** - Representa texto.
+2. **`number`** - Representa números, sejam inteiros ou decimais.
+3. **`boolean`** - Representa verdadeiro (`true`) ou falso (`false`).
+4. **`undefined`** - Representa a ausência de valor.
+5. **`null`** - Representa a ausência intencional de valor.
+6. **`symbol`** - Representa um valor único e imutável.
+7. **`bigint`** - Representa números inteiros muito grandes.
+
+Agora, vamos explorar cada um deles!
+
+### **3. Tipos Primitivos em Detalhes**
+
+#### **1. `string`**
+- **O que é?**
+  - Uma `string` é simplesmente uma sequência de caracteres, como uma palavra ou uma frase.
+
+- **Analogia:**
+  - Imagine uma `string` como uma frase escrita em um pedaço de papel. Você pode ler o papel, mas não pode mudar as letras nele depois que a frase foi escrita.
+
+- **Exemplo:**
+  ```javascript
+  const nome = "Matheus";
+  console.log(nome); // Saída: "Matheus"
+  ```
+
+#### **2. `number`**
+- **O que é?**
+  - `number` é usado para representar números, sejam inteiros ou decimais.
+
+- **Analogia:**
+  - Pense em um `number` como um contador que você usa para contar coisas, seja um número inteiro, como 7, ou um número decimal, como 3.14.
+
+- **Exemplo:**
+  ```javascript
+  const idade = 28;
+  const pi = 3.14;
+  console.log(idade); // Saída: 28
+  console.log(pi); // Saída: 3.14
+  ```
+
+#### **3. `boolean`**
+- **O que é?**
+  - Um `boolean` pode ter apenas dois valores: `true` (verdadeiro) ou `false` (falso).
+
+- **Analogia:**
+  - Pense em um `boolean` como um interruptor de luz: ele só tem dois estados possíveis - ligado (true) ou desligado (false).
+
+- **Exemplo:**
+  ```javascript
+  const maiorDeIdade = true;
+  const temCarteira = false;
+  console.log(maiorDeIdade); // Saída: true
+  console.log(temCarteira); // Saída: false
+  ```
+
+#### **4. `undefined`**
+- **O que é?**
+  - `undefined` é o valor atribuído a uma variável que foi declarada, mas não recebeu nenhum valor.
+
+- **Analogia:**
+  - Imagine que você tem uma caixa, mas não colocou nada dentro dela ainda. Essa caixa estaria "undefined" - ou seja, indefinida.
+
+- **Exemplo:**
+  ```javascript
+  let comidaFavorita;
+  console.log(comidaFavorita); // Saída: undefined
+  ```
+
+#### **5. `null`**
+- **O que é?**
+  - `null` é um valor especial que indica a ausência intencional de um valor.
+
+- **Analogia:**
+  - Se `undefined` é uma caixa vazia que nunca foi preenchida, `null` é uma caixa que você deliberadamente deixou vazia.
+
+- **Exemplo:**
+  ```javascript
+  let carro = null;
+  console.log(carro); // Saída: null
+  ```
+
+#### **6. `symbol`**
+- **O que é?**
+  - Um `symbol` é um valor único e imutável, frequentemente usado como identificador para propriedades de objetos.
+
+- **Analogia:**
+  - Imagine um `symbol` como um selo de autenticidade exclusivo que você coloca em um documento. Cada selo é único e não pode ser duplicado.
+
+- **Exemplo:**
+  ```javascript
+  const id = Symbol("id_unico");
+  console.log(id); // Saída: Symbol(id_unico)
+  ```
+
+#### **7. `bigint`**
+- **O que é?**
+  - `bigint` é um tipo usado para representar números inteiros que são muito grandes para serem representados pelo tipo `number`.
+
+- **Analogia:**
+  - Imagine que você está contando grãos de areia em uma praia. Com `bigint`, você pode contar todos os grãos sem se preocupar em atingir o limite dos números comuns.
+
+- **Exemplo:**
+  ```javascript
+  const numeroGrande = 123456789012345678901234567890n;
+  console.log(numeroGrande); // Saída: 123456789012345678901234567890n
+  ```
+
+### **4. Comparando Tipos Primitivos**
+
+- **Imutabilidade:** A maioria dos tipos primitivos, como `string` e `number`, são imutáveis. Isso significa que, uma vez criado, o valor não pode ser alterado.
+  
+- **`null` vs `undefined`:** Ambos representam ausência de valor, mas `undefined` é usado quando algo ainda não foi definido, enquanto `null` é usado quando você quer explicitamente declarar que não há valor.
+
+### **5. Resumo**
+
+Os tipos primitivos são os blocos básicos com os quais você trabalha em JavaScript. Eles são simples e diretos, mas entender como e quando usá-los é fundamental para qualquer programador. Agora que você conhece esses ingredientes básicos, está pronto para misturá-los em suas receitas de código!
+
+### **6. Exercícios Práticos**
+
+1. **Identifique o Tipo:** Crie variáveis com diferentes tipos primitivos e use `typeof` para verificar o tipo de cada uma.
+   
+2. **Caixas Vazias:** Experimente atribuir `null` e `undefined` a variáveis e observe como elas se comportam em diferentes situações.
+
+3. **Trabalhando com `bigint`:** Crie uma variável `bigint` e faça operações aritméticas com ela para entender suas diferenças em relação ao tipo `number`.
+
+---
+
+Essa aula fornece uma base sólida sobre tipos primitivos em JavaScript, preparando você para construir coisas mais complexas a partir desses elementos simples!

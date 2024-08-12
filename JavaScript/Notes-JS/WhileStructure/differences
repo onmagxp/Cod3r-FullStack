@@ -1,0 +1,137 @@
+### Aula: As Diferenças entre `while` e `do/while` em JavaScript
+
+#### Introdução
+
+Em JavaScript, existem duas estruturas de repetição que parecem semelhantes, mas funcionam de maneiras diferentes: `while` e `do/while`. Entender essas diferenças pode ajudar a escolher a ferramenta certa para o seu código. Vamos mergulhar nas particularidades dessas duas estruturas com uma didática simples e analogias claras.
+
+#### O Que é um Loop?
+
+Antes de entrarmos nos detalhes, vamos relembrar o que é um loop. Um loop é como um ciclo repetitivo: você executa um bloco de código várias vezes até que uma condição específica seja atendida.
+
+##### Analogia: Repetindo um Exercício
+
+Imagine que você está na academia e o instrutor diz para você fazer flexões. Ele pode dizer:
+
+1. **While**: "Continue fazendo flexões **enquanto** ainda tiver força."
+2. **Do/While**: "Faça pelo menos uma flexão, e depois veja se ainda tem força para continuar."
+
+Agora que entendemos essa ideia geral, vamos explorar cada um desses loops.
+
+### Estrutura `while`
+
+A estrutura `while` executa um bloco de código **enquanto** (while) a condição é verdadeira. O ponto chave é que a condição é verificada **antes** da execução do bloco de código.
+
+##### Sintaxe Básica
+
+```javascript
+while (condicao) {
+    // Bloco de código
+}
+```
+
+#### Exemplo de `while`
+
+Vamos ver um exemplo simples:
+
+```javascript
+let contador = 0;
+
+while (contador < 5) {
+    console.log(`Contagem: ${contador}`);
+    contador++;
+}
+```
+
+**Como funciona:**
+- O `while` verifica se a condição `contador < 5` é verdadeira.
+- Se for, ele executa o bloco de código e incrementa o contador.
+- Esse processo se repete até que a condição se torne falsa (ou seja, quando o contador chega a 5).
+
+##### Analogia: Verificar Antes de Agir
+
+Pense em um segurança que verifica a identidade de cada pessoa **antes** de deixá-la entrar em uma festa. Ele só deixa entrar quem tem o convite certo. Da mesma forma, o loop `while` só executa o código se a condição for verdadeira antes de começar.
+
+### Estrutura `do/while`
+
+A estrutura `do/while` é similar ao `while`, mas com uma diferença crucial: o bloco de código é sempre executado **pelo menos uma vez** antes da condição ser verificada.
+
+##### Sintaxe Básica
+
+```javascript
+do {
+    // Bloco de código
+} while (condicao);
+```
+
+#### Exemplo de `do/while`
+
+Aqui está um exemplo prático:
+
+```javascript
+let contador = 0;
+
+do {
+    console.log(`Contagem: ${contador}`);
+    contador++;
+} while (contador < 5);
+```
+
+**Como funciona:**
+- Primeiro, o bloco de código dentro do `do` é executado.
+- Depois, o `while` verifica a condição `contador < 5`.
+- Se a condição for verdadeira, o loop se repete. Se for falsa, o loop termina.
+
+##### Analogia: Agir Antes de Verificar
+
+Agora, imagine um chefe de cozinha que começa a cozinhar **antes** de verificar se todos os ingredientes estão disponíveis. Ele sempre cozinha um pouco, depois olha para ver se tem mais ingredientes e decide se deve continuar ou parar. O `do/while` funciona assim: ele "cozinha" primeiro, e só depois verifica se deve continuar.
+
+### Comparando `while` e `do/while`
+
+Vamos resumir as principais diferenças entre as duas estruturas:
+
+1. **Execução Inicial**:
+   - `while`: A condição é verificada **antes** de qualquer execução.
+   - `do/while`: O bloco de código é executado **pelo menos uma vez** antes da verificação da condição.
+
+2. **Uso Comum**:
+   - `while`: Ideal para situações onde você pode querer não executar o bloco de código nenhuma vez, se a condição já começar como falsa.
+   - `do/while`: Útil quando você **precisa** que o bloco de código seja executado pelo menos uma vez, independentemente da condição.
+
+##### Exemplo de Comparação
+
+Vamos comparar as duas estruturas lado a lado para ver a diferença na prática.
+
+**Código `while`:**
+
+```javascript
+let senhaCorreta = false;
+
+while (senhaCorreta) {
+    console.log("Bem-vindo! Você entrou.");
+}
+```
+
+**Código `do/while`:**
+
+```javascript
+let senhaCorreta = false;
+
+do {
+    console.log("Bem-vindo! Você entrou.");
+} while (senhaCorreta);
+```
+
+**Resultado:**
+- No exemplo `while`, o código não será executado porque `senhaCorreta` começa como `false`.
+- No exemplo `do/while`, a mensagem "Bem-vindo! Você entrou." será exibida **uma vez** antes de o loop verificar a condição e parar.
+
+### Quando Usar Cada Um?
+
+- **Use `while`** quando a execução do bloco de código depende da condição ser verdadeira desde o início.
+- **Use `do/while`** quando é essencial que o código seja executado pelo menos uma vez, como ao solicitar que o usuário insira uma senha ou preencha um formulário.
+
+### Conclusão
+
+Escolher entre `while` e `do/while` depende do contexto do problema que você está resolvendo. O `while` é como um porteiro que só deixa você passar se você tiver o convite, enquanto o `do/while` é como um chef que começa a cozinhar antes de verificar se tem todos os ingredientes. Com essas analogias em mente, você estará mais preparado para usar a estrutura certa no momento certo!
+
+Continue praticando com exemplos diferentes e experimente alternar entre as duas estruturas para entender quando cada uma é mais útil. Se precisar de ajuda, estou por aqui!
