@@ -16,7 +16,9 @@ for (y in nums) {
 
 externo: for (a in nums) {
     for (b in nums) {
-        if (a === 2 && === 3) break externo
-        console.log(`Par` = ${a}, ${b})
+        if (a == 2 && b == 3) break externo
+        console.log(`Par == ${a}, ${b}`)
     }
 }
+
+console.log("Esse é o Fim!")

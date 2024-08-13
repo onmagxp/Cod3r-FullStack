@@ -1,9 +1,9 @@
 function contarAteNumero(n) {
-    let contagem = 1
-    while (contagem <= 10) {
-        console.log(`Contagem: ${contagem}`)
-        contagem++
+    let numero = 1
+    while (numero <= n) {
+        console.log(`contagem : ${numero}`)
+        numero++
     }
 }
 
-contarAteNumero(1)
+contarAteNumero(10)

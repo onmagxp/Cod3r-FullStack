@@ -1,10 +1,12 @@
 function verificarIdade(idade) {
     if (idade >= 18) {
-        return 'De Maior!'
+        return 'Maior de Idade!'
     } else {
-        return 'De Menor!!!'
+        return 'Menor de Idade!!!'
     }
 }
 
-console.log(verificarIdade(30))
-console.log(verificarIdade(17))
+console.log(verificarIdade(20))
+console.log(verificarIdade(15))
+console.log(verificarIdade(31))
+console.log(verificarIdade(10))

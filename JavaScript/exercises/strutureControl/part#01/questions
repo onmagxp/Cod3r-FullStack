@@ -17,7 +17,7 @@ Vamos dividir essa lista de exercícios/aprendizado em três partes, como você 
    - **Extra:** Teste a função com diferentes valores para ver se está funcionando corretamente.
 
 2. **Condicional com Múltiplas Condições (`if/else if/else`)**
-   - **Exercício:** Crie uma função `classificarNota` que recebe uma nota de 0 a 10 e retorna "Excelente" se a nota for maior ou igual a 9, "Bom" se for maior ou igual a 7, "Regular" se for maior ou igual a 5, e "Reprovado" se for menor que 5.
+   - **Exercício:** Crie uma função `classificarNota` que recebe uma nota de 0 a 10, e retorna "Excelente" se a nota for maior ou igual a 9, "Bom" se for maior ou igual a 7, "Regular" se for maior ou igual a 5, e "Reprovado" se for menor que 5.
    - **Dica:** Use `if/else if/else` para testar cada condição.
 
 3. **Switch Case**

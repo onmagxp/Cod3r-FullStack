@@ -1,7 +1,6 @@
 function contarDe1a10() {
-    for (let contar = 1; contar <= 10; contar++) {
-        console.log(`Contagem = ${contar}`)
-    }
+    for(let n = 1; n <= 10; n++)
+        console.log(`numero : ${n}`)
 }
 
 contarDe1a10()
