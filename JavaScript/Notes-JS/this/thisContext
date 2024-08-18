@@ -1,0 +1,82 @@
+### Aula: Diferenças no Comportamento do `this` em Funções de Classe e Funções Normais
+
+#### Introdução
+Nesta aula, vamos explorar como o `this` se comporta de maneira diferente quando utilizado em funções de classe versus funções normais (também conhecidas como funções de instância). Compreender essas diferenças é crucial ao trabalhar com orientação a objetos em JavaScript e ao estruturar seu código em projetos maiores.
+
+#### `this` em Funções Normais
+Nas funções normais, o valor de `this` depende de como a função é chamada:
+- **Função Simples**: Quando você chama uma função simples, `this` normalmente se refere ao objeto global (no navegador, seria `window`). Se estiver em modo estrito (`strict mode`), `this` será `undefined`.
+
+```javascript
+function funcaoNormal() {
+    console.log(this);
+}
+
+funcaoNormal(); // No navegador: window
+```
+
+- **Método de Objeto**: Se a função é chamada como um método de um objeto, `this` aponta para o objeto que "possui" a função.
+
+```javascript
+const obj = {
+    nome: "Objeto",
+    mostrarThis: function() {
+        console.log(this);
+    }
+};
+
+obj.mostrarThis(); // `this` se refere a `obj`
+```
+
+#### `this` em Classes
+Em classes, `this` refere-se à instância específica da classe que foi criada usando `new`.
+
+```javascript
+class Pessoa {
+    constructor(nome) {
+        this.nome = nome;
+    }
+
+    mostrarNome() {
+        console.log(this.nome);
+    }
+}
+
+const pessoa1 = new Pessoa("Matheus");
+pessoa1.mostrarNome(); // `this` se refere à instância `pessoa1`
+```
+
+#### Diferenças Chave
+1. **Funções de Classe**: O `this` dentro de funções de classe é sempre a instância da classe criada com `new`, o que proporciona consistência em projetos orientados a objetos.
+2. **Funções Normais**: O `this` pode ser flexível, variando dependendo de como e onde a função é chamada, o que pode causar confusão se não for bem compreendido.
+
+#### Lidando com Ambiguidade
+Às vezes, o `this` em funções normais pode ser difícil de prever. Uma solução comum é usar o método `bind()` para amarrar o valor de `this` a um contexto específico, garantindo que ele se comporte como esperado.
+
+```javascript
+const obj = {
+    nome: "Objeto",
+    mostrarThis: function() {
+        const mostrarNome = function() {
+            console.log(this.nome);
+        }.bind(this);
+
+        mostrarNome();
+    }
+};
+
+obj.mostrarThis(); // `this` é `obj` mesmo dentro de `mostrarNome` por causa do `bind`
+```
+
+#### Resumo
+- **Funções Normais**: O `this` pode variar dependendo do contexto de chamada.
+- **Funções de Classe**: O `this` é consistente, sempre apontando para a instância da classe.
+
+#### Sugestão de Nome para o Arquivo
+**Arquivo**: `this-in-functions-and-classes.js`
+
+Este nome é curto, claro, e descreve bem o conteúdo da aula.
+
+---
+
+Se precisar de mais detalhes ou outras aulas, estou aqui para ajudar!

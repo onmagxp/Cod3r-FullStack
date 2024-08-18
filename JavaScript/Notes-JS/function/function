@@ -1,7 +1,3 @@
-Claro, Matheus Aguilera! Vou organizar suas anotações para torná-las mais didáticas e fáceis de seguir. Vou manter todas as informações, mas estruturá-las de uma forma mais clara e com explicações passo a passo. Aqui está a versão revisada:
-
----
-
 ## Aula Avançada sobre Funções em JavaScript
 
 ### O Conceito por Trás das Funções
@@ -192,7 +188,3 @@ Aqui, o `return` é explícito. Em funções arrow, você pode economizar uma li
 - **Armazenando Funções em Variáveis**: Atribua funções a variáveis para reutilização.
 - **Funções Arrow**: Sintaxe curta e moderna para funções.
 - **Retorno Implícito**: Retorna valores automaticamente em funções arrow com uma única expressão.
-
----
-
-Espero que essa organização ajude a tornar suas anotações mais claras e fáceis de seguir! Se precisar de mais alguma coisa, é só avisar.

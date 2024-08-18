@@ -1,0 +1,85 @@
+### Aula: Funções Callback em JavaScript
+
+#### Introdução
+Imagine que você está em um restaurante e faz um pedido ao garçom. Enquanto espera, você continua a conversar e se divertir. Quando o pedido está pronto, o garçom traz a comida para você. Em programação, uma função callback funciona como esse "garçom". Você faz uma solicitação (chama uma função) e, em algum momento, uma ação é realizada em resposta (a função callback é chamada).
+
+#### O que é uma Função Callback?
+Uma função callback é uma função que é passada como argumento para outra função, e essa outra função é responsável por "chamar de volta" (executar) a função passada em algum momento.
+
+- **Função Normal**: Uma função que realiza uma tarefa quando é chamada diretamente.
+- **Função Callback**: Uma função que é passada para outra função e é executada depois que a tarefa inicial é concluída.
+
+#### Exemplo Simples
+Vamos começar com um exemplo básico para ilustrar:
+
+```javascript
+function cumprimentar(nome) {
+    console.log(`Olá, ${nome}!`);
+}
+
+function processarUsuario(callback) {
+    const nome = "Matheus";
+    callback(nome);
+}
+
+processarUsuario(cumprimentar);
+```
+
+**Explicação**:
+- **cumprimentar(nome)**: Esta é a função callback. Ela apenas imprime uma saudação.
+- **processarUsuario(callback)**: Esta função recebe uma função como argumento e a executa depois de processar algo, neste caso, obter o nome "Matheus".
+- Quando chamamos `processarUsuario(cumprimentar);`, a função `processarUsuario` executa a função `cumprimentar` passando "Matheus" como argumento.
+
+#### Por que Usar Callbacks?
+Callbacks são extremamente úteis para lidar com operações assíncronas, como buscar dados de uma API, ler arquivos, ou aguardar eventos do usuário. Em vez de esperar que uma operação termine, o que poderia bloquear a execução do código, usamos callbacks para definir o que deve acontecer quando a operação finalmente for concluída.
+
+#### Exemplo com Operação Assíncrona
+Vamos ver um exemplo em que uma função callback é usada para lidar com uma operação assíncrona:
+
+```javascript
+function buscarDados(callback) {
+    setTimeout(() => {
+        const dados = { nome: "Matheus", idade: 28 };
+        callback(dados);
+    }, 2000);
+}
+
+function exibirDados(dados) {
+    console.log(`Nome: ${dados.nome}, Idade: ${dados.idade}`);
+}
+
+buscarDados(exibirDados);
+```
+
+**Explicação**:
+- **buscarDados(callback)**: Simula uma operação que leva tempo (usando `setTimeout`). Depois de 2 segundos, a função callback é chamada com os dados recuperados.
+- **exibirDados(dados)**: Esta função callback é chamada para exibir os dados assim que eles estiverem disponíveis.
+
+#### Callback Hell
+Embora callbacks sejam poderosos, eles podem levar ao "Callback Hell" quando você tem várias operações assíncronas aninhadas. Isso torna o código difícil de ler e manter.
+
+Exemplo de Callback Hell:
+
+```javascript
+buscarDados((dados) => {
+    processarDados(dados, (resultado) => {
+        salvarDados(resultado, (resposta) => {
+            console.log("Processo concluído!");
+        });
+    });
+});
+```
+
+Para evitar isso, você pode usar Promises ou async/await, que tornam o código mais limpo e fácil de seguir.
+
+#### Resumo
+- **Callback**: Uma função passada como argumento para outra função, que é executada após uma tarefa ser concluída.
+- **Uso Principal**: Lidar com operações assíncronas de maneira eficiente.
+- **Cuidados**: Evite o Callback Hell usando técnicas como Promises ou async/await.
+
+### Sugestão de Nome para o Arquivo
+**Nome do Arquivo**: `callbackFunc.js`
+
+---
+
+Essa versão da aula é mais detalhada e segue o padrão de ensino que você preferiu.
