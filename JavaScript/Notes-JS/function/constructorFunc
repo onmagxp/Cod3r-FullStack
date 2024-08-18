@@ -1,0 +1,102 @@
+### Aula: Função Construtora em JavaScript
+
+#### Introdução
+
+Em JavaScript, as funções construtoras são como "fábricas" que nos permitem criar múltiplos objetos com a mesma estrutura. Elas são utilizadas para instanciar novos objetos, proporcionando um jeito simples de criar "moldes" para esses objetos. Se você já se perguntou como criar vários objetos com propriedades semelhantes, as funções construtoras são a solução.
+
+### 1. O Que é uma Função Construtora?
+
+Uma função construtora é uma função especial que, quando chamada com a palavra-chave `new`, cria e retorna um novo objeto. Pense em uma função construtora como uma receita de bolo: você define os ingredientes (propriedades) e o modo de preparo (métodos), e a cada vez que segue essa receita, você cria um novo bolo (objeto).
+
+#### Exemplo Básico:
+
+```javascript
+function Pessoa(nome, idade) {
+    this.nome = nome;
+    this.idade = idade;
+
+    this.apresentar = function() {
+        console.log(`Olá, meu nome é ${this.nome} e tenho ${this.idade} anos.`);
+    };
+}
+
+const pessoa1 = new Pessoa('Matheus', 28);
+const pessoa2 = new Pessoa('Lorena', 30);
+
+pessoa1.apresentar(); // "Olá, meu nome é Matheus e tenho 28 anos."
+pessoa2.apresentar(); // "Olá, meu nome é Lorena e tenho 30 anos."
+```
+
+### 2. Como Funciona uma Função Construtora?
+
+Quando usamos a palavra-chave `new` com uma função, três coisas principais acontecem:
+
+1. **Criação de um Novo Objeto**: Um novo objeto é criado.
+2. **Ligação do `this` ao Novo Objeto**: Dentro da função, `this` se refere ao novo objeto criado.
+3. **Retorno do Novo Objeto**: A função retorna o novo objeto automaticamente, a menos que você especifique outro valor para retornar.
+
+#### Como o `new` Funciona na Prática:
+
+```javascript
+const pessoa1 = new Pessoa('Matheus', 28);
+```
+
+- Um novo objeto é criado.
+- `this.nome` e `this.idade` são atribuídos ao novo objeto.
+- `pessoa1` agora contém esse novo objeto.
+
+### 3. Usando Métodos Dentro da Função Construtora
+
+Funções construtoras não só definem propriedades, mas também podem incluir métodos que são compartilhados por todos os objetos criados por essa função. Esses métodos podem manipular ou exibir as propriedades do objeto.
+
+#### Exemplo:
+
+```javascript
+function Carro(marca, modelo, ano) {
+    this.marca = marca;
+    this.modelo = modelo;
+    this.ano = ano;
+
+    this.descricao = function() {
+        return `${this.marca} ${this.modelo}, Ano ${this.ano}`;
+    };
+}
+
+const carro1 = new Carro('Toyota', 'Corolla', 2020);
+console.log(carro1.descricao()); // "Toyota Corolla, Ano 2020"
+```
+
+Aqui, cada carro criado a partir da função `Carro` terá o método `descricao`, que retorna uma descrição personalizada do carro.
+
+### 4. Analogias para Facilitar o Entendimento
+
+- **Receita de Bolo**: Imagine que a função construtora é uma receita. A cada vez que você segue a receita (chama a função com `new`), você cria um novo bolo (objeto) que segue a mesma estrutura, mas pode ter ingredientes diferentes (valores das propriedades).
+  
+- **Molde de Fabricação**: Pensa numa fábrica de brinquedos onde cada brinquedo segue um molde. A função construtora é esse molde, e cada vez que a função é chamada, um novo brinquedo (objeto) é fabricado com as características especificadas.
+
+### 5. Diferença entre Função Construtora e Função Regular
+
+A principal diferença é que uma função construtora é destinada a ser usada com `new`, enquanto uma função regular não. Sem `new`, `this` dentro da função não se referiria ao novo objeto, mas sim ao contexto global (ou undefined em modo estrito).
+
+#### Exemplo:
+
+```javascript
+const pessoa3 = Pessoa('Clara', 25); // Aqui, `this` não se refere a um novo objeto, mas ao contexto global.
+console.log(pessoa3); // undefined, pois a função não retorna explicitamente um valor.
+```
+
+### 6. Convenção de Nomenclatura
+
+É uma convenção em JavaScript que funções construtoras sejam nomeadas com a primeira letra em maiúscula. Isso ajuda a diferenciar funções regulares de funções construtoras.
+
+### Conclusão
+
+Funções construtoras são uma maneira poderosa e flexível de criar múltiplos objetos com a mesma estrutura em JavaScript. Ao entender como elas funcionam, você pode criar objetos mais complexos e organizados em seus projetos.
+
+---
+
+### Sugestão de Nome para o Arquivo
+
+Um bom nome para essa aula poderia ser "constrFunc.js". É curto e deixa claro que o conteúdo aborda funções construtoras.
+
+Se precisar de mais alguma coisa ou tiver dúvidas, é só chamar!

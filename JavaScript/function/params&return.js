@@ -1,3 +1,4 @@
+// Parametro e Retorno são opcionais
 function area(largura, altura) {
     const area = largura * altura
     if (area > 20) {
